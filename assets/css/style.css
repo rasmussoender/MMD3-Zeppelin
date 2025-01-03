@@ -1,0 +1,180 @@
+/* Font */
+
+/* General */
+body, h1, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+  
+body {
+    margin: 0;
+}
+  
+/* Hero Section */
+.hero {
+position: relative;
+background-image: url('../img/herobilledeZeppelin.jpg');
+background-size: cover;
+background-position: center;
+height: 100vh;
+color: white;
+}
+
+/* Nav */
+.navbar {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 1em 2em;
+background: rgba(0, 0, 0, 0.5);
+}
+.navItems {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+
+
+}
+
+.navItems li a {
+    color: white;
+}
+
+.zeppelinLogo {
+    height: 6rem;
+
+}
+
+
+
+.menu-icon {
+color: white;
+font-size: 2em;
+cursor: pointer;
+}
+
+
+
+/* Overlay Menu */
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0; 
+    left: auto; 
+    width: 60%;
+    height: 100%;
+    background: #1E1E1E;
+    color: white;
+    z-index: 999;
+    display: none; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+.overlay-content {
+text-align: center;
+}
+
+.overlay ul {
+padding: 0;
+}
+
+.overlay ul li {
+margin: 1em 0;
+}
+
+.overlay ul li h3 {
+font-size: 1.2em;
+margin-bottom: 0.5em;
+text-transform: uppercase;
+}
+
+.overlay ul li a {
+font-size: 1em;
+color: white;
+font-weight: bold;
+text-transform: capitalize;
+}
+
+.close-icon {
+position: absolute;
+top: 20px;
+right: 20px;
+font-size: 2em;
+cursor: pointer;
+}
+
+/* Hero indhold */
+
+.hero-content {
+position: absolute;
+top: 50%;
+left: 20%;
+transform: translate(-50%, -50%);
+}
+
+.hero-content h1 {
+font-size: 3em;
+margin-bottom: 0.5em;
+}
+
+.hero-content p {
+font-size: 1.5em;
+margin-bottom: 1em;
+}
+
+.hero-content .button {
+padding: 0.5em 1em;
+background: yellow;
+color: black;
+font-weight: bold;
+text-transform: uppercase;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+}
+
+/* Scroll Down */
+.scroll-down {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  
+  .scroll-down i {
+    font-size: 2em;
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+}
+
+/* Forestilling cards */
+.card {
+width: 300px;
+height: 400px;
+background-image: url('../img/herobilledeZeppelin.jpg'); 
+background-size: cover;
+position: relative;
+}
+
+.text {
+position: absolute;
+bottom: 20px;
+left: 20px;
+color: white;
+font-family: sans-serif;
+font-size: 24px;
+background-color: #FFD700;
+margin: 0;
+}
+
