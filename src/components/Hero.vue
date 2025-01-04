@@ -47,7 +47,7 @@ margin-bottom: 2em;
 }
 
 .buttonType1 {
-  background-color: yellow;
+  background-color: var(--primary-yellow);
   color: black;
   padding: 20px 40px;
   border: 1.5px solid transparent; 

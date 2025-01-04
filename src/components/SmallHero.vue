@@ -7,9 +7,6 @@
       <h1>{{ heroTitle }}</h1>
     </div>
     
-    <div class="scroll-down">
-      <i class="fas fa-chevron-down"></i>
-    </div>
   </header>
 </template>
 

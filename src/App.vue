@@ -33,5 +33,8 @@ body {
     margin: 0;
     
 }
+p {
+  line-height: 1.3;
+}
 
   </style>

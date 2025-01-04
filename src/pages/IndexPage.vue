@@ -198,7 +198,8 @@ margin: 4rem;
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: rgba(255, 215, 0, 0.9); 
+  
+  background-color: rgba(218, 204, 0, 0.85);
   padding: 10px 15px;
   text-align: left;
 }
@@ -218,7 +219,7 @@ margin: 4rem;
 }
 
 .buttonType1 {
-  background-color: yellow;
+  background-color: var(--primary-yellow);
   color: black;
   padding: 20px 40px;
   border: 1.5px solid transparent; 
@@ -232,7 +233,7 @@ margin: 4rem;
 .buttonType1:hover{
   background-color: white; 
   color: black; 
-  border-color: yellow;
+  border-color: var(--primary-yellow);
   transform: scale(1.05); 
 }
 
