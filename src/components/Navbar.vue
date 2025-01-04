@@ -4,7 +4,7 @@
       <div class="navItems">
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/shows">Shows</router-link></li>
-        <li><a href="#">Events</a></li>
+        <li><router-link to="/Events">Events</router-link></li>
         <div class="menu-icon" @click="toggleMenu">
           <i class="fas fa-bars" id="burger-menu"></i>
         </div>
