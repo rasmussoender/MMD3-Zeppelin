@@ -2,8 +2,8 @@
     <nav class="navbar">
       <img class="zeppelinLogo" src="../assets/img/zeppelinLogo.svg" alt="" />
       <div class="navItems">
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/shows">Shows</router-link></li>
+        <li><router-link to="/">Forside</router-link></li>
+        <li><router-link to="/Forestillinger">Forestillinger</router-link></li>
         <li><router-link to="/Events">Events</router-link></li>
         <div class="menu-icon" @click="toggleMenu">
           <i class="fas fa-bars" id="burger-menu"></i>
@@ -60,11 +60,15 @@
 
 /* Nav */
 .navbar {
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 1em 2em;
-background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2em;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  z-index: 1000; 
+  box-sizing: border-box; 
 }
 .navItems {
     display: flex;
@@ -86,30 +90,36 @@ background: rgba(0, 0, 0, 0.5);
 
 
 .menu-icon {
-color: white;
-font-size: 2em;
-cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+  z-index: 1001; 
 }
 
 
 
 /* Overlay Menu */
 .overlay {
-    position: fixed;
-    top: 0;
-    right: 0; 
-    left: auto; 
-    width: 60%;
-    height: 100%;
-    background: #1E1E1E;
-    color: white;
-    z-index: 999;
-    display: none; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background: #1E1E1E;
+  color: white;
+  z-index: 1000; 
+  display: none; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, opacity 0.3s ease; 
+}
+.overlay.show {
+  display: flex;
+}
 
 .overlay-content {
 text-align: center;

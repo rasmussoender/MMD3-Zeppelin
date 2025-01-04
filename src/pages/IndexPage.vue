@@ -15,17 +15,22 @@
             afhængigt af forestillingens type og deltagerantal. Kontakt os for
             at høre mere og finde en løsning, der passer til jer!
           </p>
-          <button></button>
-          <button></button>
+          <div class="buttonWrapper">
+            <a href="./casestudies.html" class="buttonType1">Om Zeppelin</a>
+            <a href="index.html#contactSection" class="buttonType1"
+            >Info til besøgende</a
+            >
+          </div>
         </div>
         <video width="640" height="360" controls>
           <source src="../assets/img/introVideoIndex.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </section>
+      <hr class="deviderLine">
       <section class="forestillingerIndex">
     <div class="forestillingerList">
-      <div v-for="forestilling in forestillinger.slice(0, 5)" :key="forestilling.id" class="forestillingCard">
+      <div v-for="forestilling in forestillinger.slice(0, 4)" :key="forestilling.id" class="forestillingCard">
         <router-link :to="{ name: 'forestilling', params: { id: forestilling.id } }">
           <img :src="forestilling.acf.image.url" :alt="forestilling.title.rendered" />
           <div class="forestillingText">
@@ -35,7 +40,25 @@
         </router-link>
       </div>
     </div>
+    <div class="centeredBtn">
+      <a href="./casestudies.html" class="buttonType1">Alle forestillinger</a>
+    </div>
   </section>
+
+  <hr class="deviderLine">
+<section class="pictureGalleri">
+  <h3>Følg os på instagram</h3>
+  <div>
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+  </div>
+  <p>@teatretzeppelin</p>
+</section>
       </main>
 </template>
 
@@ -130,33 +153,99 @@ border-radius: 5px;
     }
 }
 
+.deviderLine {
+  border: none;
+  height: 2px;
+  background-color: black;
+margin: 4rem;
+}
+
 /* Intro sektion */
 .indexIntro {
   display: flex;
   padding: 4rem;
 }
+.indexIntro p {
+  width: 80%;
+}
 
 /* Forestilling cards */
+.forestillingerList {
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center; 
+}
 .forestillingCard {
-  position: relative; 
-  width: 20vw;
-  height: 400px;
+  position: relative;
+  overflow: hidden;
+  width: 300px; 
+  height: 50vh;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .forestillingCard img {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
+  display: block;
+  width: 100%;
+  object-fit: contain;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0; 
 }
 
 .forestillingText {
-  position: absolute; 
-  bottom: 10px; 
-  left: 10px; 
-  font-size: 24px;
-  background-color: #FFD700;
-  padding: 10px;
-  color: #000;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 215, 0, 0.9); 
+  padding: 10px 15px;
+  text-align: left;
+}
+
+.forestillingTitle {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+}
+
+.forestillingDate {
+  font-size: 1rem;
+  color: black;
+  margin: 5px 0 0;
+}
+
+.buttonType1 {
+  background-color: yellow;
+  color: black;
+  padding: 20px 40px;
+  border: 1.5px solid transparent; 
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; 
+}
+
+.buttonType1:hover{
+  background-color: white; 
+  color: black; 
+  border-color: yellow;
+  transform: scale(1.05); 
+}
+
+.buttonWrapper {
+  padding-top: 2rem;
+  display: flex;
+  gap: 20px;
+  justify-content: left; 
+}
+
+.centeredBtn {
+  display: flex;
+  justify-content: center;
 }
 
 </style>

@@ -3,7 +3,7 @@
       <div class="hero-content">
         <h1>Teatret Zeppelin</h1>
         <p>Teater med kant for børn og voksne!</p>
-        <a href="#" class="button">Forestillinger</a>
+        <a href="./casestudies.html" class="buttonType1">Alle forestillinger</a>
       </div>
       <div class="scroll-down">
         <i class="fas fa-chevron-down"></i>
@@ -43,18 +43,27 @@ margin-bottom: 0.5em;
 
 .hero-content p {
 font-size: 1.5em;
-margin-bottom: 1em;
+margin-bottom: 2em;
 }
 
-.hero-content .button {
-padding: 0.5em 1em;
-background: yellow;
-color: black;
-font-weight: bold;
-text-transform: uppercase;
-border: none;
-cursor: pointer;
-border-radius: 5px;
+.buttonType1 {
+  background-color: yellow;
+  color: black;
+  padding: 20px 40px;
+  border: 1.5px solid transparent; 
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; 
 }
+
+.buttonType1:hover{
+  background-color: white; 
+  color: black; 
+  border-color: yellow;
+  transform: scale(1.05); 
+}
+
   </style>
   

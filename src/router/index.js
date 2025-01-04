@@ -8,7 +8,7 @@ import EventsPage from '../pages/EventsPage.vue';
 
 const routes = [
   { path: '/', name: 'Index', component: IndexPage },
-  { path: '/shows', name: 'Shows', component: ShowsPage },
+  { path: '/Forestillinger', name: 'Forestillinger', component: ShowsPage },
   { path: '/forestilling/:id', component: EnkelForestilling, name: 'forestilling' }, 
   { path: '/Events', name: 'Events', component: EventsPage },
 
