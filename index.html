@@ -4,78 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="./assets/js/app.js" defer></script>
     <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
   </head>
+
   <body>
-    <header class="hero">
-      <nav class="navbar">
-        <img class="zeppelinLogo" src="./assets/img/zeppelinLogo.svg" alt="" />
-        <div class="navItems">
-          <li><a href="#">Forside</a></li>
-          <li><a href="#">Forestillinger</a></li>
-          <li><a href="#">Events</a></li>
-          <div class="menu-icon">
-            <i class="fas fa-bars" id="burger-menu"></i>
-          </div>
-        </div>
-      </nav>
-
-      <div class="hero-content">
-        <h1>Teatret Zeppelin</h1>
-        <p>Teater med kant for børn og voksne!</p>
-        <a href="#" class="button">Forestillinger</a>
-      </div>
-      <div class="scroll-down">
-        <i class="fas fa-chevron-down"></i>
-      </div>
-    </header>
-
-    <!-- Full-screen Overlay Menu -->
-    <div id="overlay-menu" class="overlay">
-      <div class="close-icon">
-        <i class="fas fa-times" id="close-menu"></i>
-      </div>
-      <div class="overlay-content">
-        <ul>
-          <li><h3>SCENEN OG SAMVÆRET</h3></li>
-          <li><a href="#">Teater forestillinger</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Kor</a></li>
-          <li><h3>I TEATRET</h3></li>
-          <li><a href="#">Særlige behov</a></li>
-          <li><a href="#">Information til besøgende</a></li>
-          <li><h3>BØRN & UNGE</h3></li>
-          <li><a href="#">For børnefamilier</a></li>
-          <li><a href="#">For skoler og institutioner</a></li>
-          <li><h3>MEDIER</h3></li>
-          <li><a href="#">Artikler</a></li>
-          <li><a href="#">Podcast</a></li>
-          <li><h3>OM TEATRET</h3></li>
-          <li><a href="#">Om os</a></li>
-          <li><a href="#">Kontakt</a></li>
-          <li><a href="#">Sponsor</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <main>
-      <section class="forestillingerIndex">
-        <div class="card">
-          <div class="image"></div>
-          <div class="text">
-            <p>ROD</p>
-            <p>1. Marts - 28. Marts 2025</p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <script src="script.js"></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
