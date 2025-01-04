@@ -80,6 +80,7 @@
 
 .navItems li a {
     color: white;
+    font-size: 1.2rem;
 }
 
 .zeppelinLogo {

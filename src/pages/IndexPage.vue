@@ -46,16 +46,30 @@
   </section>
 
   <hr class="deviderLine">
-<section class="pictureGalleri">
-  <h3>Følg os på instagram</h3>
-  <div>
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
+  <section class="pictureGalleri">
+  <h3>Følg os på Instagram</h3>
+  <div class="indexInstagramGrid">
+    <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
+      <img src="../assets/img/zeppelinInstagram1.png" alt="">
+    </a>
+    <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
+      <img src="../assets/img/zeppelinInstagram2.png" alt="">
+    </a>
+    <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
+      <img src="../assets/img/zeppelinInstagram3.png" alt="">
+    </a>
+    <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
+      <img src="../assets/img/zeppelinInstagram4.png" alt="">
+    </a>
+    <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
+      <img src="../assets/img/zeppelinInstagram5.png" alt="">
+    </a>
+    <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
+      <img src="../assets/img/zeppelinInstagram6.png" alt="">
+    </a>
+    <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
+      <img src="../assets/img/zeppelinInstagram7.png" alt="">
+    </a>
   </div>
   <p>@teatretzeppelin</p>
 </section>
@@ -249,4 +263,36 @@ margin: 4rem;
   justify-content: center;
 }
 
+/* Instagram galliri */
+.pictureGalleri {
+  padding: 4rem;
+}
+
+.indexInstagramGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem; 
+}
+
+.grid-item {
+  display: block;
+  position: relative; 
+}
+
+.indexInstagramGrid a img {
+  display: block;    
+  width: 100%;       
+  height: 100%;      
+  object-fit: cover; 
+}
+
+.indexInstagramGrid a:nth-of-type(1) {
+  grid-column: span 2; 
+  grid-row: span 2;    
+  height: 100%;        
+}
+
+.indexInstagramGrid a:nth-of-type(n+2) {
+  grid-column: span 1;
+}
 </style>
