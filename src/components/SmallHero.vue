@@ -1,60 +1,65 @@
 <template>
-    <header class="hero">
-      <div class="hero-content">
-        <h1>Teatret Zeppelin</h1>
-        <p>Teater med kant for børn og voksne!</p>
-        <a href="#" class="button">Forestillinger</a>
-      </div>
-      <div class="scroll-down">
-        <i class="fas fa-chevron-down"></i>
-      </div>
-    </header>
+  <header class="hero">
+    <!-- Hero billeder og titeler er dynamiske-->
+    <img :src="heroImage" :alt="heroTitle" class="hero-image" />
+    
+    <div class="hero-content">
+      <h1>{{ heroTitle }}</h1>
+    </div>
+    
+    <div class="scroll-down">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </header>
+</template>
 
-  </template>
-  
-  <script>
+<script>
+export default {
+  props: {
+    heroImage: {
+      type: String,
+      required: true
+    },
+    heroTitle: {
+      type: String,
+      required: true
+    }
+  }
+}
+</script>
 
-  </script>
-  
-  <style scoped>
-
+<style scoped>
 .hero {
-position: relative;
-background-image: url('../assets/img/herobilledeZeppelin.jpg');
-background-size: cover;
-background-position: center;
-height: 100vh;
-color: white;
+  position: relative;
+  height: 50vh;
+  color: white;
 }
 
-  /* Hero indhold */
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; 
+}
 
+/* Hero content */
 .hero-content {
-position: absolute;
-top: 50%;
-left: 20%;
-transform: translate(-50%, -50%);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .hero-content h1 {
-font-size: 3em;
-margin-bottom: 0.5em;
+  font-size: 3em;
+  margin-bottom: 0.5em;
 }
 
-.hero-content p {
-font-size: 1.5em;
-margin-bottom: 1em;
-}
 
-.hero-content .button {
-padding: 0.5em 1em;
-background: yellow;
-color: black;
-font-weight: bold;
-text-transform: uppercase;
-border: none;
-cursor: pointer;
-border-radius: 5px;
-}
-  </style>
-  
+
+</style>

@@ -1,9 +1,10 @@
 <template>
-    <div>
-      <SmallHero 
-
-      />
-    </div>
+  <div>
+    <SmallHero 
+      :heroImage="'img/herobilledeZeppelin.jpg'"
+      :heroTitle="'Events'"
+    />
+  </div>
   </template>
   
   <script>

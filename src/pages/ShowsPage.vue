@@ -1,4 +1,10 @@
 <template>
+  <div>
+    <SmallHero 
+      :heroImage="'img/herobilledeZeppelin.jpg'"
+      :heroTitle="'Forestillinger'"
+    />
+  </div>
   <section class="forestillingerIndex">
 
     <section class="forestillingerIndex">
@@ -19,10 +25,15 @@
   </template>
   
   <script>
-  export default {
+import SmallHero from "../components/SmallHero.vue";
+
+export default {
+  components: {
+    SmallHero,
+  },
   data() {
     return {
-      forestillinger: [], 
+      forestillinger: [],
     };
   },
   mounted() {
@@ -32,8 +43,8 @@
     async fetchForestillinger() {
       try {
         const response = await fetch('https://zeppelin-teater.rasmuspedersen.net/wp-json/wp/v2/posts?categories=2');
-        const data = await response.json(); 
-        this.forestillinger = data; 
+        const data = await response.json();
+        this.forestillinger = data;
       } catch (error) {
         console.error("Der opstod en fejl ved hentning af data:", error);
       }
@@ -46,26 +57,52 @@
   </script>
 
   <style scoped>
-  /* Forestilling cards */
+/* Forestilling cards */
+.forestillingerList {
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center; 
+}
 .forestillingCard {
-  position: relative; 
-  width: 20vw;
-  height: 400px;
+  position: relative;
+  overflow: hidden;
+  width: 300px; 
+  height: 50vh;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .forestillingCard img {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
+  display: block;
+  width: 100%;
+  object-fit: contain;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0; 
 }
 
 .forestillingText {
-  position: absolute; 
-  bottom: 10px; 
-  left: 10px; 
-  font-size: 24px;
-  background-color: #FFD700;
-  padding: 10px;
-  color: #000;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(255, 215, 0, 0.9); 
+  padding: 10px 15px;
+  text-align: left;
 }
+
+.forestillingTitle {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+}
+
+.forestillingDate {
+  font-size: 1rem;
+  color: black;
+  margin: 5px 0 0;
+}
+
 </style>
