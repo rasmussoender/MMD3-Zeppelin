@@ -37,8 +37,12 @@
             <p class="description">{{ forestilling.acf.description }}</p>
             <a :href="forestilling.acf.ticketurl" target="_blank" class="buttonType1">Køb billet</a>
           </div>
+        </section>
 
-
+        <section class="reviewSection" >
+          <i class="fa-solid fa-quote-left"></i>
+          <p>Oplagt begynderforestilling, der kan give appetit på mere hos det yngste publikum. Det er vel svært at finde bedre børneteater til denne aldersgruppe og det fortjener Teater Next stor ros for at satse på</p>
+          <h5>- Set på Scenen</h5>
         </section>
         
       </main>
@@ -140,6 +144,23 @@
 
 .textCalenderSection img {
   width: 50%;
+}
+
+.reviewSection {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  padding-bottom: 2rem;
+  background: #176C76;
+  color: white;
+  border-radius: 5px;
+
+}
+
+.reviewSection i {
+  font-size: 3rem;
+  padding-bottom: 1rem;
 }
 
   </style>
