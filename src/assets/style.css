@@ -61,3 +61,13 @@ border-color: var(--primary-yellow);
 transform: scale(1.05); 
   }
   
+
+/* Devider line styling */
+
+.deviderLine {
+    border: none;
+    height: 2px;
+    background-color: black;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }

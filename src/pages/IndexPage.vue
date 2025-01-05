@@ -167,13 +167,7 @@ border-radius: 5px;
     }
 }
 
-.deviderLine {
-  border: none;
-  height: 2px;
-  background-color: black;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
+
 
 /* Intro sektion */
 .indexIntro {
