@@ -171,13 +171,13 @@ border-radius: 5px;
   border: none;
   height: 2px;
   background-color: black;
-margin: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* Intro sektion */
 .indexIntro {
   display: flex;
-  padding: 4rem;
 }
 .indexIntro p {
   width: 80%;
@@ -185,7 +185,6 @@ margin: 4rem;
 
 /* Forestilling cards */
 .forestillingerList {
-  padding: 4rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center; 
@@ -232,41 +231,24 @@ margin: 4rem;
   margin: 5px 0 0;
 }
 
-.buttonType1 {
-  background-color: var(--primary-yellow);
-  color: black;
-  padding: 20px 40px;
-  border: 1.5px solid transparent; 
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; 
-}
 
-.buttonType1:hover{
-  background-color: white; 
-  color: black; 
-  border-color: var(--primary-yellow);
-  transform: scale(1.05); 
-}
 
 .buttonWrapper {
   padding-top: 2rem;
   display: flex;
   gap: 20px;
   justify-content: left; 
+  
 }
 
 .centeredBtn {
   display: flex;
   justify-content: center;
+  padding-top: 2rem;
 }
 
 /* Instagram galliri */
-.pictureGalleri {
-  padding: 4rem;
-}
+
 
 .indexInstagramGrid {
   display: grid;

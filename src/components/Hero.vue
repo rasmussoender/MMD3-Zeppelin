@@ -46,24 +46,7 @@ font-size: 1.5em;
 margin-bottom: 2em;
 }
 
-.buttonType1 {
-  background-color: var(--primary-yellow);
-  color: black;
-  padding: 20px 40px;
-  border: 1.5px solid transparent; 
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.2rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; 
-}
 
-.buttonType1:hover{
-  background-color: white; 
-  color: black; 
-  border-color: var(--primary-yellow);
-  transform: scale(1.05); 
-}
 
   </style>
   
