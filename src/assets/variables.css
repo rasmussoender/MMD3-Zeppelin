@@ -1,13 +1,15 @@
+/* Variabler */
 :root {
+  /* Farver */
     --primary-yellow: #DACC00;
+    --primary-blue: #176C76;
+    --primary-text-dark: #333333;
 
-  }
 
-  /* Spacing */
-:root {
+    /* Spacing */
     --spacing-small: 0.5rem;
     --spacing-medium: 1rem;
     --spacing-large: 4rem;
-  
+
   }
-  
+

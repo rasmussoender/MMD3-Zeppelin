@@ -85,7 +85,7 @@
 /* Hero section styles */
 .heroForestilling {
   position: relative;
-  height: 100vh; 
+  height: 75vh; 
   overflow: hidden;
 }
 
@@ -128,6 +128,7 @@
 .introIcons div i {
   font-size: 2rem; 
   margin-bottom: 20px; 
+  color: var(--primary-blue);
 }
 
 
