@@ -45,6 +45,11 @@ padding: var(--spacing-large);
 
 }
 
+.heading2 {
+  font-size: var(--heading-2);
+  margin-bottom: 10px;
+}
+
 
 /* General button styling */
 .buttonType1 {
@@ -76,3 +81,28 @@ transform: scale(1.05);
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+
+  /* Review section */
+  .reviewSection {
+    padding-top: 2rem;
+    padding-left: 20rem;
+    padding-right: 20rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    background: #176C76;
+    color: white;
+    border-radius: 5px;
+    height: 30vh;
+  
+  }
+  
+  .reviewSection i {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    
+  }
+
+  .reviewSection div {
+    padding-top: 2rem;
+  }
+

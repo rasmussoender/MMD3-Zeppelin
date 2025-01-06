@@ -6,8 +6,8 @@
   <main>
     <section class="indexIntro">
         <div>
-          <h2>Velkommen til Teatret Zeppelin!</h2>
-          <h3>Byens familieteater i hjertet af Vesterbro</h3>
+          <h3 class="heading2">Velkommen til Teatret Zeppelin!</h3>
+          <h4>Byens familieteater i hjertet af Vesterbro</h4>
           <p>
             Vi tilbyder spændende forestillinger for både klasser og familier.
             Vores program rummer noget for enhver smag, uanset om det er lærerig
@@ -28,7 +28,19 @@
         </video>
       </section>
       <hr class="deviderLine">
+      <section class="reviewSection">
+        <div>
+
+          
+          <i class="fa-solid fa-quote-left"></i>
+          <p>Som altid formår Teatret Zeppelin at skabe en fabelagtigt smuk forestilling. Rekvisitter, kostumer, musik og teknik er af højeste kvalitet</p>
+          <h5>- Den 4. væg</h5>
+        </div>
+
+      </section>
+      <hr class="deviderLine">
       <section class="forestillingerIndex">
+        <h3 class="heading2">Forestillinger 2024/25</h3>
     <div class="forestillingerList">
       <div v-for="forestilling in forestillinger.slice(0, 4)" :key="forestilling.id" class="forestillingCard">
         <router-link :to="{ name: 'forestilling', params: { id: forestilling.id } }">
@@ -47,7 +59,7 @@
 
   <hr class="deviderLine">
   <section class="pictureGalleri">
-  <h3>Følg os på Instagram</h3>
+  <h3 class="heading2">Følg os på Instagram</h3>
   <div class="indexInstagramGrid">
     <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
       <img src="../assets/img/zeppelinInstagram1.png" alt="">
@@ -177,11 +189,12 @@ border-radius: 5px;
   width: 80%;
 }
 
+
+
 /* Forestilling cards */
 .forestillingerList {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  justify-items: center; 
 }
 .forestillingCard {
   position: relative;
