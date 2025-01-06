@@ -248,11 +248,7 @@ border-radius: 5px;
   
 }
 
-.centeredBtn {
-  display: flex;
-  justify-content: center;
-  padding-top: 2rem;
-}
+
 
 /* Instagram galliri */
 

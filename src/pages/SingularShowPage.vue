@@ -165,8 +165,8 @@
 .heroForestillingTitle {
   position: absolute;
   text-transform: uppercase;
-  top: 80%;
-  left: 80%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   font-size: 6rem;

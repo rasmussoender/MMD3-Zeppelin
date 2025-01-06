@@ -70,6 +70,12 @@ color: black;
 border-color: var(--primary-yellow);
 transform: scale(1.05); 
   }
+
+.centeredBtn {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
   
 
 /* Devider line styling */
