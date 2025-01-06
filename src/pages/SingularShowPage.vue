@@ -136,7 +136,7 @@
           const data = await response.json();
           this.forestilling = data; 
         } catch (error) {
-          console.error("Error fetching show data:", error);
+          console.error("Der opstod en fejl!", error);
         }
       },
     },

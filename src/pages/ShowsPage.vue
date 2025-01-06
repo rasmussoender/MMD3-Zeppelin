@@ -7,7 +7,6 @@
   </div>
   <section class="forestillingerIndex">
 
-    <section class="forestillingerIndex">
     <div class="forestillingerList">
       <div v-for="forestilling in forestillinger" :key="forestilling.id" class="forestillingCard">
         <router-link :to="{ name: 'forestilling', params: { id: forestilling.id } }">
@@ -19,7 +18,6 @@
         </router-link>
       </div>
     </div>
-  </section>
   </section>
 
   </template>
@@ -46,7 +44,7 @@ export default {
         const data = await response.json();
         this.forestillinger = data;
       } catch (error) {
-        console.error("Der opstod en fejl ved hentning af data:", error);
+        console.error("Der opstod en fejl!", error);
       }
     },
   },
