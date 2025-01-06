@@ -12,7 +12,6 @@
         <div class="aboutUsContent">
           <div>
             <h3 class="heading2">Hvem er vi?</h3>
-            <h4>Nyt semester starter d.22-1.25</h4>
             <p>
               Teatret Zeppelin er ikke bare et børneteater. Det er underholdning med dybde for børn og deres voksne. Det er teater med kant i store opsætninger med smæk på effekterne, men med intimiteten bevaret. Her kan du året rundt opleve forestillinger for hele familien og for børn i skolealderen i særdeleshed.
             </p>
@@ -212,6 +211,10 @@
 .aboutUsContent {
     display: flex;
     gap: 4rem;
+  }
+
+  .aboutUsContent p {
+    padding-bottom: 2rem;
   }
 
   .aboutUsContent video {

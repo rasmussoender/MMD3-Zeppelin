@@ -83,17 +83,16 @@ export default {
 .eventCard img {
   display: block;
   width: 100%;
-  object-fit: contain;
-  height: auto;
-  object-fit: cover;
-  border-radius: 5px 5px 0 0; 
+  height: 100%; 
+  object-fit: cover; 
+  border-radius: 5px 5px 0 0;  
 }
 
 .eventText {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: rgba(255, 215, 0, 0.9); 
+  background-color: rgba(30, 30, 30, 0.8);
   padding: 10px 15px;
   text-align: left;
 }
@@ -102,13 +101,13 @@ export default {
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: bold;
-  color: black;
+  color: var(--primary-yellow);
   margin: 0;
 }
 
 .eventDate {
   font-size: 1rem;
-  color: black;
+  color: var(--primary-yellow);
   margin: 5px 0 0;
 }
 

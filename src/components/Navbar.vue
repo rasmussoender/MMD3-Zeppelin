@@ -6,7 +6,7 @@
     
     <div class="navItems">
       <li><router-link to="/">Forside</router-link></li>
-      <li><router-link to="/forestillinger">Forestillinger</router-link></li>
+      <li><router-link to="/forestillinger" >Forestillinger</router-link></li>
       <li><router-link to="/events">Events</router-link></li>
       <a href="https://teaterbilletter.dk/forestillinger?venueCodes=VN0000129" target="_blank" class="navButton">Køb billet</a>
       <div class="menu-icon" @click="toggleMenu">
@@ -16,9 +16,7 @@
   </nav>
 
   <div ref="overlayMenu" class="overlay">
-    <div class="close-icon" @click="toggleMenu">
-      <i class="fas fa-times" id="close-menu"></i>
-    </div>
+
     <div class="overlay-content">
       <ul>
         <li><h3>SCENEN OG SAMVÆRET</h3></li>
@@ -61,11 +59,11 @@
   export default {
     name: "Navbar",
     methods: {
-      toggleMenu() {
-        const overlayMenu = this.$refs.overlayMenu;
-        overlayMenu.style.display = overlayMenu.style.display === "flex" ? "none" : "flex";
-      }
-    }
+  toggleMenu() {
+    const overlayMenu = this.$refs.overlayMenu;
+    overlayMenu.style.display = overlayMenu.style.display === "flex" ? "none" : "flex";
+  }
+}
   };
   </script>
   
@@ -85,7 +83,7 @@
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
   width: 100%;
-  z-index: 1000; 
+  z-index: 1002; 
   box-sizing: border-box; 
 }
 .navItems {
@@ -137,6 +135,7 @@ transform: scale(1.05);
   cursor: pointer;
   z-index: 1001; 
 }
+
 
 
 
@@ -203,13 +202,6 @@ font-weight: bold;
 text-transform: capitalize;
 }
 
-.close-icon {
-position: absolute;
-top: 1.5rem;
-right: 2rem;
-font-size: 2.5rem;
-cursor: pointer;
-}
 
 
 

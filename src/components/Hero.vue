@@ -3,7 +3,7 @@
       <div class="hero-content">
         <h1>Teatret Zeppelin</h1>
         <p>Teater med kant for børn og voksne!</p>
-        <a href="./casestudies.html" class="buttonType1">Alle forestillinger</a>
+        <li><router-link class="buttonType1" to="/forestillinger">Forestillinger</router-link></li>
       </div>
       <div class="scroll-down">
         <i class="fas fa-chevron-down"></i>

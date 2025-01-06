@@ -16,10 +16,9 @@
             at høre mere og finde en løsning, der passer til jer!
           </p>
           <div class="buttonWrapper">
-            <a href="./casestudies.html" class="buttonType1">Om Zeppelin</a>
-            <a href="index.html#contactSection" class="buttonType1"
-            >Info til besøgende</a
-            >
+            <li><router-link class="buttonType1" to="/forestillinger">Forestillinger</router-link></li>
+            <li><router-link class="buttonType1" to="/informationBesogende">Info til besøgende</router-link></li>
+            
           </div>
         </div>
         <video width="640" height="360" controls>
@@ -56,7 +55,7 @@
       </div>
     </div>
     <div class="centeredBtn">
-      <a href="./casestudies.html" class="buttonType1">Alle forestillinger</a>
+      <li><router-link class="buttonType1" to="/forestillinger">Forestillinger</router-link></li>
     </div>
   </section>
 
@@ -122,45 +121,6 @@ export default {
 </script>
 
   <style scoped>
-  /* Hero Section */
-.hero {
-position: relative;
-background-image: url('../assets/img/herobilledeZeppelin.jpg');
-background-size: cover;
-background-position: center;
-height: 100vh;
-color: white;
-}
-
-  /* Hero indhold */
-
-.hero-content {
-position: absolute;
-top: 50%;
-left: 20%;
-transform: translate(-50%, -50%);
-}
-
-.hero-content h1 {
-font-size: 3em;
-margin-bottom: 0.5em;
-}
-
-.hero-content p {
-font-size: 1.5em;
-margin-bottom: 1em;
-}
-
-.hero-content .button {
-padding: 0.5em 1em;
-background: yellow;
-color: black;
-font-weight: bold;
-text-transform: uppercase;
-border: none;
-cursor: pointer;
-border-radius: 5px;
-}
 
 /* Scroll Down */
 .scroll-down {
@@ -211,9 +171,8 @@ border-radius: 5px;
 .forestillingCard img {
   display: block;
   width: 100%;
-  object-fit: contain;
-  height: auto;
-  object-fit: cover;
+  height: 100%; 
+  object-fit: cover; 
   border-radius: 5px 5px 0 0; 
 }
 
@@ -222,7 +181,7 @@ border-radius: 5px;
   bottom: 0;
   width: 100%;
   
-  background-color: rgba(218, 204, 0, 0.85);
+  background-color: rgba(30, 30, 30, 0.8);
   padding: 10px 15px;
   text-align: left;
 }
@@ -231,20 +190,20 @@ border-radius: 5px;
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: bold;
-  color: black;
+  color: var(--primary-yellow);
   margin: 0;
 }
 
 .forestillingDate {
   font-size: 1rem;
-  color: black;
+  color: var(--primary-yellow);
   margin: 5px 0 0;
 }
 
 
 
 .buttonWrapper {
-  padding-top: 2rem;
+  padding-top: 3rem;
   display: flex;
   gap: 20px;
   justify-content: left; 
