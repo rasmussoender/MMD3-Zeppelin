@@ -28,17 +28,20 @@
         </video>
       </section>
       <hr class="deviderLine">
-      <section class="reviewSection">
-        <div>
 
-          
-          <i class="fa-solid fa-quote-left"></i>
-          <p>Som altid formår Teatret Zeppelin at skabe en fabelagtigt smuk forestilling. Rekvisitter, kostumer, musik og teknik er af højeste kvalitet</p>
-          <h5>- Den 4. væg</h5>
+      <section>
+        <h3 class="heading2">Citater fra anmeldere</h3>
+        <div class="reviewSection">
+          <div>
+            <i class="fa-solid fa-quote-left"></i>
+            <p>Som altid formår Teatret Zeppelin at skabe en fabelagtigt smuk forestilling. Rekvisitter, kostumer, musik og teknik er af højeste kvalitet</p>
+            <h5>- Den 4. væg</h5>
+          </div>
         </div>
-
       </section>
+
       <hr class="deviderLine">
+
       <section class="forestillingerIndex">
         <h3 class="heading2">Forestillinger 2024/25</h3>
     <div class="forestillingerList">

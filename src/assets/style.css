@@ -48,6 +48,7 @@ padding: var(--spacing-large);
 .heading2 {
   font-size: var(--heading-2);
   margin-bottom: 10px;
+  margin-top: 0;
 }
 
 
