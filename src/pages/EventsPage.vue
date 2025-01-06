@@ -61,12 +61,7 @@ export default {
   <style scoped>
 
   /* event sektion */
-  .eventSection .introText {
-    font-size: var(--introSectionFont);
-    padding: 10rem;
-    padding-top: 0;
-    padding-bottom: 2rem;
-  }
+
 .eventList {
   padding: 4rem;
   padding-top: 0;

@@ -112,3 +112,11 @@ transform: scale(1.05);
     padding-top: 2rem;
   }
 
+  /* Intro text */
+  .introText {
+    font-size: var(--introSectionFont);
+    padding: 10rem;
+    padding-top: 0;
+    padding-bottom: 2rem;
+  }
+
