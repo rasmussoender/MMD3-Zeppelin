@@ -85,7 +85,7 @@
 /* Hero section styles */
 .heroForestilling {
   position: relative;
-  height: 75vh; 
+  height: 80vh; 
   overflow: hidden;
 }
 

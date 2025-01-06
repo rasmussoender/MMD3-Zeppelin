@@ -1,7 +1,7 @@
 <template>
   <div>
     <SmallHero 
-      :heroImage="'img/herobilledeZeppelin.jpg'"
+      :heroImage="'img/heroTest.jpg'"
       :heroTitle="'Events'"
     />
   </div>
