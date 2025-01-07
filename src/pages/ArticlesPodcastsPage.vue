@@ -8,7 +8,7 @@
 
   <main>
     <section class="articlePodcastSection">
-      <p class="introText">Teatret Zeppelin tilbyder forskellige artikler og podcasts, der giver indsigt i vores projekter og baggrundshistorier. Uanset om du er interesseret i teaterverdenen eller ønsker at høre mere om de kreative processer, har vi noget for dig.</p>
+      <p class="introText">Samling af artikler og Podcasts med viden om teater, debat og baggrundsstof om teater samt nyheder og info om Teatret Zeppelin – skrevet af medarbejderne og ledelsen på Teatret Zeppelin.</p>
       <div class="articlePodcastList">
         <div 
           v-for="articlePodcast in articlesPodcasts" 
@@ -19,7 +19,6 @@
             <img :src="articlePodcast.acf.image.url" :alt="articlePodcast.title.rendered" />
             <div class="articlePodcastText">
               <p class="articlePodcastTitle">{{ articlePodcast.title.rendered }}</p>
-              <p class="articlePodcastDate">{{ articlePodcast.acf.date }}</p>
             </div>
           </router-link>
         </div>
@@ -65,7 +64,7 @@ export default {
   padding: 4rem;
   padding-top: 0;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   justify-items: center; 
   gap: 2rem;
 
