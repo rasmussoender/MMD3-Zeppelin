@@ -28,16 +28,6 @@
               <p>{{ articlePodcast.acf.text3 }}</p>
             </div>
 
-            <div>
-              <h3>Hvad kræver auteur-metoden af de medvirkende?</h3>
-              <p>Mie fremhæver resonans som et nøgleord inden for auteur-metoden.
-              ”Vi er alle sammen mennesker, og vi er nogenlunde ens.”
-              Hvis det materiale, der udvikles i fællesskab, ikke vækker resonans – eller dissonans, så ved hun, det skal ud. I den arbejdsform får alle medvirkende et stærkt medejerskab af forestillingen, fordi de bidrager med noget af personlig betydning.
-              “Jo mere man tør byde ind med sine personlige fortællinger, jo stærkere bliver ejerforholdet og forestillingen.”
-              Mie understreger dog, at auteur-metoden ikke handler om terapi. Hun forsøger ikke at løse folks problemer, men bruger fortællingerne til at skabe materiale, der vækker resonans. De medvirkendes fortællinger bruger hun aldrig i deres oprindelige form, og aldrig på en udleverende måde. Alligevel kræver det mod at deltage i en auteur-forestilling – skuespillere skal turde sætte deres egne følelser på spil. Mie læner sig frem i stolen, idet hun siger:
-              “Man kan ikke ansætte en skuespiller, der ikke vil det – det blokerer hele processen, hvis nogen ikke vil dele det, der betyder noget for dem. Så genererer vi ikke materiale.”
-            </p>
-            </div>
 
         </div>
 

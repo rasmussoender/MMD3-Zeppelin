@@ -54,9 +54,10 @@
           </div>
         </div>
 
-        <hr class="deviderLine"></hr>
-
+        
       </section>
+      <hr class="deviderLine"></hr>
+
       <div class="accordion">
         <h3 class="heading2">Ofte stillede spørgsmål</h3>
       <div
@@ -126,42 +127,6 @@ export default {
   .choirContent video {
     width: 50%;
   }
-
-  .accordion {
-  max-width: 50vw;
-  margin: 0 auto;
-  font-family: Arial, sans-serif;
-}
-
-.accordionItem {
-  border-bottom: 1px solid var(--primary-text-dark);
-}
-
-.accordionClosed {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: bold;
-
-}
-
-.accordionOpen {
-  padding: 15px;
-  font-size: 16px;
-}
-
-.fa-solid {
-  transition: transform 0.3s ease;
-  color: var(--primary-yellow);
-  font-size: 1.5rem;
-}
-
-.rotatedArrow {
-  transform: rotate(180deg);
-}
 
 
     </style>
