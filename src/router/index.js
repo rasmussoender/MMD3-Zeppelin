@@ -13,6 +13,7 @@ import WorkshopsPage from '../pages/WorkshopsPage.vue';
 import SingularWorkshopPage from '../pages/SingularWorkshopPage.vue';
 import EducationalMaterialPage from '../pages/EducationalMaterialPage.vue'; 
 import ArticlesPodcastsPage from '../pages/ArticlesPodcastsPage.vue'; 
+import SingularArticlePodcastPage from '../pages/SingularArticlePage.vue';  
 import AboutUsPage from '../pages/AboutUsPage.vue'; 
 
 const routes = [
@@ -29,6 +30,7 @@ const routes = [
   { path: '/workshop/:id', name: 'workshop', component: SingularWorkshopPage }, 
   { path: '/undervisningsmateriale', name: 'undervisningsmateriale', component: EducationalMaterialPage },
   { path: '/artiklerPodcasts', name: 'artiklerPodcasts', component: ArticlesPodcastsPage },
+  { path: '/artiklerPodcast/:id', name: 'artiklerPodcast', component: SingularArticlePodcastPage },
   { path: '/omOs', name: 'omOs', component: AboutUsPage },
 ];
 

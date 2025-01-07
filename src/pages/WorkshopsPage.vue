@@ -33,7 +33,6 @@
             <img :src="workshop.acf.image.url" :alt="workshop.title.rendered" />
             <div class="workshopText">
               <p class="workshopTitle">{{ workshop.title.rendered }}</p>
-              <p class="workshopDate">{{ workshop.acf.date }}</p>
             </div>
           </router-link>
         </div>
