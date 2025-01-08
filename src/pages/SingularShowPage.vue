@@ -236,6 +236,32 @@
   grid-column: span 1;
 }
 
+.reviewSection {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
+  padding-bottom: 2rem;
+  background: #176C76;
+  color: white;
+  border-radius: 5px;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  text-align: left; 
+}
+
+.reviewSection i {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+
+.reviewSection div {
+  padding-top: 2rem;
+}
+
 
 
   </style>

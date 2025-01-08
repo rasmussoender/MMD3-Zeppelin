@@ -183,7 +183,7 @@ transform: scale(1.05);
 /* Heros på single sider */
   .singularPageHero {
     position: relative;
-    height: 80vh;
+    height: 75vh;
     overflow: hidden;
   }
   
