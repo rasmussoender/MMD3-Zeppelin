@@ -4,7 +4,7 @@
   </div>
 
   <main>
-    <section class="indexIntro">
+    <section class="mediaTextSection">
         <div>
           <h3 class="heading2">Velkommen til Teatret Zeppelin!</h3>
           <h4>Byens familieteater i hjertet af Vesterbro</h4>
@@ -21,7 +21,7 @@
             
           </div>
         </div>
-        <video width="640" height="360" controls>
+        <video controls>
           <source src="../assets/img/introVideoIndex.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -141,12 +141,6 @@ export default {
 
 
 /* Intro sektion */
-.indexIntro {
-  display: flex;
-}
-.indexIntro p {
-  width: 80%;
-}
 
 
 

@@ -9,7 +9,7 @@
     <main>
 
 
-        <div class="aboutUsContent">
+        <div class="mediaTextSection">
           <div>
             <h3 class="heading2">Hvem er vi?</h3>
             <p>
@@ -210,18 +210,7 @@
     
     <style scoped>
 
-.aboutUsContent {
-    display: flex;
-    gap: 4rem;
-  }
 
-  .aboutUsContent p {
-    padding-bottom: 2rem;
-  }
-
-  .aboutUsContent video {
-    width: 50%;
-  }
 
   /* Ensemble sektion */
   .ensembleContainer {

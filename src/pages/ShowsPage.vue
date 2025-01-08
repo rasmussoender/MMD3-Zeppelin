@@ -6,7 +6,7 @@
     />
   </div>
   <section class="forestillingerIndex">
-
+    <p class="introText">Teatret Zeppelin tilbyder en række spændende og meningsfulde forestillinger, der appellerer til både børn og unge. Med mere end 40 års erfaring skaber teatret forestillinger, der udfordrer og engagerer publikum fra store til små </p>
     <div class="forestillingerList">
       <div v-for="forestilling in forestillinger" :key="forestilling.id" class="forestillingCard cardAnimation">
         <router-link :to="{ name: 'forestilling', params: { id: forestilling.id } }">
@@ -56,6 +56,7 @@ export default {
 /* Forestilling cards */
 .forestillingerList {
   padding: 4rem;
+  padding-top: 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center; 
@@ -98,6 +99,9 @@ export default {
   font-size: 1rem;
   color: var(--primary-yellow) ;
   margin: 5px 0 0;
+}
+.introText {
+  padding-top: 4rem;
 }
 
 </style>

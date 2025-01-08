@@ -99,6 +99,22 @@ transform: scale(1.05);
   padding-bottom: 2rem;
   }
 
+  /* Tekst + billede/video sektion */
+  .mediaTextSection {
+    display: flex;
+    gap: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .mediaTextSection p {
+    padding-bottom: 2rem;
+  }
+
+  .mediaTextSection video, .mediaTextSection img {
+    width: 50%;
+  }
+
   /* accordion */
  .accordion {
   max-width: 50vw;

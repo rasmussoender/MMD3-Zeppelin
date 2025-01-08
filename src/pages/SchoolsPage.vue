@@ -7,7 +7,7 @@
     </div>
 
     <main>
-      <div class="schoolIntro">
+      <div class="mediaTextSection">
           <div>
             <h3 class="heading2">Info til skoler og instutioner</h3>
             <p>
@@ -44,7 +44,7 @@
 
     <hr class="deviderLine">
 
-    <div class="schoolIntro">
+    <div class="mediaTextSection">
           <div>
             <h3 class="heading2">Forbered dine elever</h3>
             <p>
@@ -57,7 +57,7 @@
           <img src="../assets/img/workshopCafe.jpg" alt="">
         </div>
 
-        <div class="schoolIntro">
+        <div class="mediaTextSection">
           <img src="../assets/img/workshopCafe.jpg" alt="">
 
           <div>
@@ -197,19 +197,7 @@ export default {
     </script>
     
     <style scoped>
-    .schoolIntro {
-    display: flex;
-    gap: 4rem;
-    padding-bottom: 4rem;
-  }
 
-  .schoolIntro p {
-    padding-bottom: 2rem;
-  }
-
-  .schoolIntro img {
-    width: 50%;
-  }
   /* Workshop cards */
   .workshopList {
     padding-top: 0;

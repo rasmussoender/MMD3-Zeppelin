@@ -11,7 +11,7 @@
         <p class="introText">Teatret har to kor: Familiekoret og Kvindekoret – måske et af dem lige er sagen for dig/jer? Der er ingen krav til niveau og erfaring. I skal bare have lysten til at synge sammen! Læs mere om de to kor herunder. .</p>
         <hr class="deviderLine">
 
-        <div class="choirContent">
+        <div class="mediaTextSection">
           <div>
             <h3 class="heading2">Zeppelins familiekor</h3>
             <h4>Nyt semester starter d.22-1.25</h4>
@@ -33,7 +33,7 @@
 
         <hr class="deviderLine"></hr>
 
-        <div class="choirContent">
+        <div class="mediaTextSection">
           <video controls>
           <source src="../assets/img/zeppelinKvindekor.mp4" type="video/mp4" />
           Din browser supporter ikke denne video
@@ -119,14 +119,6 @@ export default {
     </script>
     
     <style scoped>
-  .choirContent {
-    display: flex;
-    gap: 4rem;
-  }
-
-  .choirContent video {
-    width: 50%;
-  }
 
 
     </style>

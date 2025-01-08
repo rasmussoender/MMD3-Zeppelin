@@ -7,7 +7,7 @@
     </div>
 
     <main>
-      <div class="educationMaterialIntro">
+      <div class="mediaTextSection">
           <div>
             <h3 class="heading2">undervisningsmateriale til Zeppelins forestillinger</h3>
             <p>
@@ -116,18 +116,6 @@
     
     <style scoped>
 
-.educationMaterialIntro {
-    display: flex;
-    gap: 4rem;
-  }
-
-  .educationMaterialIntro p {
-    padding-bottom: 2rem;
-  }
-
-  .educationMaterialIntro img {
-    width: 50%;
-  }
 
   .educationMaterialList {
   display: grid;

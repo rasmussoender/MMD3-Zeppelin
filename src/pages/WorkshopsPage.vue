@@ -8,7 +8,7 @@
 
   <main>
     <section class="workshopSection">
-      <div class="workshopIntro">
+      <div class="mediaTextSection">
           <div>
             <h3 class="heading2">Workshops (Zepzone)</h3>
             <p>
@@ -73,19 +73,7 @@ export default {
     
     <style scoped>
 
-.workshopIntro {
-    display: flex;
-    gap: 4rem;
-    padding-bottom: 4rem;
-  }
 
-  .workshopIntro p {
-    padding-bottom: 2rem;
-  }
-
-  .workshopIntro img {
-    width: 50%;
-  }
     /* Event sektion */
 
   .workshopList {
