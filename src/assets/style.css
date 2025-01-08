@@ -112,6 +112,7 @@ transform: scale(1.05);
 
   .mediaTextSection video, .mediaTextSection img{
     width: 50%;
+    height: 100%;
   }
   
 

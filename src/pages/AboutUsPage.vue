@@ -52,35 +52,57 @@
           </div>
         </div>
 
+        <div class="indexInstagramContainer">
+          <div class="indexInstagramGrid">
+            <div class="imageContainer">
+              <img src="../assets/img/ZeppelinOm1.jpg" alt="">
+            </div>
+            <div class="imageContainer">
+              <img src="../assets/img/ZeppelinOm2.jpg" alt="">
+            </div>
+            <div class="imageContainer">
+              <img src="../assets/img/ZeppelinOm3.jpg" alt="">
+            </div>
+            <div class="imageContainer">
+              <img src="../assets/img/ZeppelinOm4.jpg" alt="">
+            </div>
+            <div class="imageContainer">
+              <img src="../assets/img/ZeppelinOm5.jpg" alt="">
+            </div>
+            <div class="imageContainer">
+              <img src="../assets/img/ZeppelinOm6.jpg" alt="">
+            </div>
+            <div class="imageContainer">
+              <img src="../assets/img/ZeppelinOm7.jpg" alt="">
+            </div>
+          </div>
+          <div class="indexInstagramGrid flipped">
+            <div class="imageContainer">
+              <img src="../assets/img/ZeppelinOm8.jpg" alt="">
+            </div>
+            <div class="imageContainer">
+              <img src="../assets/img/ZeppelinOm9.jpg" alt="">
+            </div>
+            <div class="imageContainer">
+              <img src="../assets/img/ZeppelinOm10.jpg" alt="">
+            </div>
+            <div class="imageContainer">
+              <img src="../assets/img/ZeppelinOm11.jpg" alt="">
+            </div>
+            <div class="imageContainer">
+              <img src="../assets/img/ZeppelinOm12.jpg" alt="">
+            </div>
+            <div class="imageContainer">
+              <img src="../assets/img/ZeppelinOm13.jpg" alt="">
+            </div>
+            <div class="imageContainer">
+              <img src="../assets/img/ZeppelinOm14.jpg" alt="">
+            </div>
+          </div>
+          </div>
 
-        <div class="indexInstagramGrid">
-          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
-            <img src="../assets/img/zeppelinInstagram1.png" alt="">
-          </a>
-          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
-            <img src="../assets/img/zeppelinInstagram2.png" alt="">
-          </a>
-          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
-            <img src="../assets/img/zeppelinInstagram3.png" alt="">
-          </a>
-          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
-            <img src="../assets/img/zeppelinInstagram4.png" alt="">
-          </a>
-          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
-            <img src="../assets/img/zeppelinInstagram5.png" alt="">
-          </a>
-          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
-            <img src="../assets/img/zeppelinInstagram6.png" alt="">
-          </a>
-          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
-            <img src="../assets/img/zeppelinInstagram7.png" alt="">
-          </a>
-        </div>
-
-        
       </section>
 
-        
           <hr class="deviderLine">
           <section>
         <h3 class="heading2">Citater fra anmeldere</h3>
@@ -186,12 +208,6 @@
           </div>
           </section>
 
-
-
-
-      
-
-
     </main>
     </template>
     
@@ -268,30 +284,47 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem; 
+
 }
 
-.grid-item {
+.indexInstagramGrid:nth-of-type(1) {
+  padding-bottom: 1rem;
+}
+
+.indexInstagramGrid div {
+  width: 100%;
+  height: 15rem;
+}
+
+.indexInstagramGrid div img {
   display: block;
-  position: relative; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.indexInstagramGrid a img {
-  display: block;    
-  width: 100%;       
-  height: 100%;      
-  object-fit: cover; 
-}
-
-.indexInstagramGrid a:nth-of-type(1) {
+.indexInstagramGrid div:nth-of-type(1) {
   grid-column: span 2; 
   grid-row: span 2;    
-  height: 100%;        
+  height: 31rem;
+
 }
 
-.indexInstagramGrid a:nth-of-type(n+2) {
-  grid-column: span 1;
+.indexInstagramGrid.flipped {
+  direction: rtl; 
 }
-  
+
+.indexInstagramGrid.flipped div {
+  direction: ltr;
+}
+
+.indexInstagramGrid.flipped div:nth-of-type(1) {
+  grid-column: span 2; 
+  grid-row: span 2;    
+}
+
+
+
   
     </style>
     
