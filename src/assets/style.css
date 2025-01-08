@@ -15,7 +15,6 @@ body, h1, p, ul, li, a {
 
 body {
     margin: 0;
-    background: #F9F7EF;
 
     
 }
@@ -111,9 +110,10 @@ transform: scale(1.05);
     padding-bottom: 2rem;
   }
 
-  .mediaTextSection video, .mediaTextSection img {
+  .mediaTextSection video, .mediaTextSection img{
     width: 50%;
   }
+  
 
   /* accordion */
  .accordion {
