@@ -1,14 +1,12 @@
 <template>
     <section class="singularArticlePodcast">
       <div v-if="articlePodcast">
-        <header class="articlePodcastHero">
-          <img class="articlePodcastHeroImage" :src="articlePodcast.acf.image.url" :alt="articlePodcast.title.rendered" />
-          <h1 class="articlePodcastHeroTitle">{{ articlePodcast.title.rendered }}</h1>
+        <header class="singularPageHero">
+          <img class="singularPageHeroImage" :src="articlePodcast.acf.image.url" :alt="articlePodcast.title.rendered" />
+          <h1 class="singularPageHeroTitle">{{ articlePodcast.title.rendered }}</h1>
         </header>
 
         <main>
-
-
         <section class="articlePodcastSection">
         <div class="articlePodcastTextSection">
             <h2 class="heading2">{{ articlePodcast.acf.title }}</h2>
@@ -68,35 +66,6 @@
   </script>
   
   <style scoped>
-
-  /* Hero section styles */
-.articlePodcastHero {
-  position: relative;
-  height: 80vh; 
-  overflow: hidden;
-}
-
-.articlePodcastImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.articlePodcastHeroTitle {
-  position: absolute;
-  text-transform: uppercase;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 6rem;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  z-index: 1; 
-}
 
 .articlePodcastSection {
   padding-left: 10rem;

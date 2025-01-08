@@ -70,9 +70,7 @@
 
 <style>
 
-
 /* General */
-
 
 /* Nav */
 .navbar {
@@ -91,41 +89,47 @@
     flex-direction: row;
     align-items: center;
     gap: 5rem;
-
-
 }
 
 .navItems li a {
     color: white;
     font-size: 1.2rem;
+    transition: color 0.3s ease; 
 }
 
+.navItems li a:hover,
+.zeppelinLogo:hover,
+.navItems li a.router-link-active {
+    color: var(--primary-yellow); 
+}
+
+/* Logo */
 .zeppelinLogo {
     height: 6rem;
-
 }
 
-/* Nav button */
+
+/* Nav knap */
 .navButton {
-background-color: var(--primary-yellow);
-color: black;
-padding: 10px 20px;
-border: 1.5px solid transparent; 
-border-radius: 5px;
-cursor: pointer;
-font-size: 1rem;
-text-decoration: none;
-transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; 
+  background-color: var(--primary-yellow);
+  color: black;
+  padding: 10px 20px;
+  border: 1.5px solid transparent; 
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; 
 }
 
 .navButton:hover{
-background-color: white; 
-color: black; 
-border-color: var(--primary-yellow);
-transform: scale(1.05); 
-  }
+  background-color: white; 
+  color: black; 
+  border-color: var(--primary-yellow);
+  transform: scale(1.05); 
+}
 
-
+/* Menu icon */
 .menu-icon {
   display: flex;
   align-items: center;
@@ -134,12 +138,14 @@ transform: scale(1.05);
   font-size: 2em;
   cursor: pointer;
   z-index: 1001; 
+  transition: color 0.3s ease; 
 }
 
+.menu-icon:hover {
+  color: var(--primary-yellow); 
+}
 
-
-
-/* Overlay Menu */
+/* Åben burger */
 .overlay {
   position: fixed;
   top: 0;
@@ -182,32 +188,30 @@ transform: scale(1.05);
 }
 
 .overlay ul {
-padding: 0;
+  padding: 0;
 }
 
 .overlay ul li {
-margin: 1em 0;
+  margin: 1em 0;
 }
 
 .overlay ul li h3 {
-font-size: 1.2em;
-text-transform: uppercase;
-margin-bottom: -.5rem;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  margin-bottom: -.5rem;
 }
 
 .overlay ul li a {
-font-size: 1em;
-color: white;
-font-weight: bold;
-text-transform: capitalize;
+  font-size: 1em;
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+  transition: color 0.3s ease; 
 }
 
-
-
-
-
-
-
+.overlay ul li a:hover {
+  color: var(--primary-yellow); 
+}
 
 </style>
 

@@ -39,7 +39,18 @@ export default {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1; 
+  z-index: 0; 
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 1; 
 }
 
 /* Hero content */
@@ -50,6 +61,7 @@ export default {
   transform: translate(-50%, -50%);
   text-align: center;
   text-transform: uppercase;
+  z-index: 2; 
 }
 
 .hero-content h1 {

@@ -8,10 +8,10 @@
   <section class="forestillingerIndex">
 
     <div class="forestillingerList">
-      <div v-for="forestilling in forestillinger" :key="forestilling.id" class="forestillingCard">
+      <div v-for="forestilling in forestillinger" :key="forestilling.id" class="forestillingCard cardAnimation">
         <router-link :to="{ name: 'forestilling', params: { id: forestilling.id } }">
           <img :src="forestilling.acf.image.url" :alt="forestilling.title.rendered" />
-          <div class="forestillingText">
+          <div class="forestillingText cardAnimationText">
             <p class="forestillingTitle">{{ forestilling.title.rendered }}</p>
             <p class="forestillingDate">{{ forestilling.acf.date }}</p>
           </div>

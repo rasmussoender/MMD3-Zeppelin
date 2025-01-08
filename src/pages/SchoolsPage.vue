@@ -27,11 +27,11 @@
         <div 
           v-for="workshop in workshops" 
           :key="workshop.id" 
-          class="workshopCard"
+          class="workshopCard cardAnimation"
         >
           <router-link :to="{ name: 'workshop', params: { id: workshop.id } }">
             <img :src="workshop.acf.image.url" :alt="workshop.title.rendered" />
-            <div class="workshopText">
+            <div class="workshopText cardAnimationText">
               <p class="workshopTitle">{{ workshop.title.rendered }}</p>
             </div>
           </router-link>
@@ -79,35 +79,35 @@
           <div class="educationMaterialList">
 
           <a href="https://zeppelin.dk/wp-content/uploads/2023/05/TeatretZeppelin_TOVE_Undervisningsmateriale_V1_web.pdf" target="_blank" class="educationMaterialLink">
-            <div class="educationMaterialCard">
+            <div class="educationMaterialCard cardAnimation">
               <img src="../assets/img/toveZeppelin.jpg" alt="" />
-              <div class="educationMaterialText">
+              <div class="educationMaterialText cardAnimationText">
                 <p class="educationMaterialTitle">Tove</p> 
               </div>
             </div>  
           </a>  
 
           <a href="https://zeppelin.dk/wp-content/uploads/2023/01/Undervisningsmateriale-Maelkeboettereglementet-version-S27-01-2023.pdf" target="_blank" class="educationMaterialLink">
-            <div class="educationMaterialCard">
+            <div class="educationMaterialCard cardAnimation">
               <img src="../assets/img/maelkeboetteZeppelin.jpg" alt="" />
-              <div class="educationMaterialText">
+              <div class="educationMaterialText cardAnimationText">
                 <p class="educationMaterialTitle">MÆLKEBØTTEREGLEMENTET</p>
               </div>
             </div>  
           </a>  
           <a href="https://zeppelin.dk/wp-content/uploads/2022/01/UV-materiale_Mio_2022_web.pdf" target="_blank" class="educationMaterialLink">
-            <div class="educationMaterialCard">
+            <div class="educationMaterialCard cardAnimation">
               <img src="../assets/img/mioMioZeppelin.jpg" alt="" />
-              <div class="educationMaterialText">
+              <div class="educationMaterialText cardAnimationText">
                 <p class="educationMaterialTitle">Mio, Min Mio</p>
               </div>
             </div>  
           </a>  
 
           <a href="https://zeppelin.dk/wp-content/uploads/2014/07/Skolemat.-Frost-2019.pdf" target="_blank" class="educationMaterialLink">
-            <div class="educationMaterialCard">
+            <div class="educationMaterialCard cardAnimation">
               <img src="../assets/img/frostBrodreZeppelin.jpg" alt="" />
-              <div class="educationMaterialText">
+              <div class="educationMaterialText cardAnimationText">
                 <p class="educationMaterialTitle">Frostbrødre</p>
               </div>
             </div>  

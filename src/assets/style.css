@@ -82,22 +82,21 @@ transform: scale(1.05);
   
 
 /* Devider line styling */
-
 .deviderLine {
-    border: none;
-    height: 2px;
-    background-color: black;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+  border: none;
+  height: 2px;
+  background-color: black;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   }
 
   
   /* Intro text */
   .introText {
-    font-size: var(--introSectionFont);
-    padding: 10rem;
-    padding-top: 0;
-    padding-bottom: 2rem;
+  font-size: var(--introSectionFont);
+  padding: 10rem;
+  padding-top: 0;
+  padding-bottom: 2rem;
   }
 
   /* accordion */
@@ -136,4 +135,90 @@ transform: scale(1.05);
 .rotatedArrow {
   transform: rotate(180deg);
 }
+
+/* Card animationer */
+.cardAnimation {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 50vh;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.cardAnimation img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cardAnimation .cardAnimationText {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(30, 30, 30, 0.8);
+  padding: 10px 15px;
+  text-align: left;
+  color: white;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.cardAnimation:hover img {
+  transform: scale(1.1); 
+}
+
+.cardAnimation:hover .cardAnimationText {
+  background-color: rgba(30, 30, 30, 0.9);
+}
+
+.cardAnimation:hover {
+  transform: translateY(-5px); 
+}
+
+/* Heros på single sider */
+  .singularPageHero {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+  }
+  
+  .singularPageHeroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  
+  .singularPageHero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
+    pointer-events: none; 
+  }
+  
+  .singularPageHeroTitle {
+    position: absolute;
+    text-transform: uppercase;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 6rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 2; 
+  }
 

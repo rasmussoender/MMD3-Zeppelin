@@ -13,11 +13,11 @@
         <div 
           v-for="articlePodcast in articlesPodcasts" 
           :key="articlePodcast.id" 
-          class="articlePodcastCard"
+          class="articlePodcastCard cardAnimation"
         >
           <router-link :to="{ name: 'artiklerPodcast', params: { id: articlePodcast.id } }">
             <img :src="articlePodcast.acf.image.url" :alt="articlePodcast.title.rendered" />
-            <div class="articlePodcastText">
+            <div class="articlePodcastText cardAnimationText">
               <p class="articlePodcastTitle">{{ articlePodcast.title.rendered }}</p>
             </div>
           </router-link>

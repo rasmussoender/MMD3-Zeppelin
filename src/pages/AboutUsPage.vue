@@ -27,7 +27,70 @@
         </div>
         <hr class="deviderLine">
 
-        <section class="ensembleSection">
+        <section class="zeppelinsHusSection">
+        <h3 class="heading2">Zeppelins hus</h3>
+        <div class="introIcons">
+          <div>
+            <i class="fa-solid fa-chair"></i>
+            <p>Siddepladser: 170</p>
+          </div>
+          
+          <div>
+            <i class="fa-solid fa-ruler"></i>
+            <p> Areal - væg til væg: 21x10m </p>
+          </div>
+          
+          <div>
+            <i class="fa-solid fa-house-user"></i>
+
+            <p>Rum: 25</p>
+          </div>
+          
+          <div>
+            <i class="fa-solid fa-ruler-combined"></i>
+            <p>Kvadratmeter: 720 m2</p>
+          </div>
+        </div>
+
+
+        <div class="indexInstagramGrid">
+          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
+            <img src="../assets/img/zeppelinInstagram1.png" alt="">
+          </a>
+          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
+            <img src="../assets/img/zeppelinInstagram2.png" alt="">
+          </a>
+          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
+            <img src="../assets/img/zeppelinInstagram3.png" alt="">
+          </a>
+          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
+            <img src="../assets/img/zeppelinInstagram4.png" alt="">
+          </a>
+          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
+            <img src="../assets/img/zeppelinInstagram5.png" alt="">
+          </a>
+          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
+            <img src="../assets/img/zeppelinInstagram6.png" alt="">
+          </a>
+          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
+            <img src="../assets/img/zeppelinInstagram7.png" alt="">
+          </a>
+        </div>
+
+        
+      </section>
+
+        
+          <hr class="deviderLine">
+          <section>
+        <h3 class="heading2">Citater fra anmeldere</h3>
+          <Swiper />
+      </section>
+
+
+      <hr class="deviderLine">
+
+      <section class="ensembleSection">
           <h3 class="heading2">Medarbejdere</h3>
           <div class="ensembleContainer">
             <div>
@@ -122,72 +185,8 @@
             </div>
           </div>
           </section>
-          <hr class="deviderLine">
-          <section>
-        <h3 class="heading2">Citater fra anmeldere</h3>
-        <div class="reviewSection">
-          <div>
-            <i class="fa-solid fa-quote-left"></i>
-            <p>Som altid formår Teatret Zeppelin at skabe en fabelagtigt smuk forestilling. Rekvisitter, kostumer, musik og teknik er af højeste kvalitet</p>
-            <h5>- Den 4. væg</h5>
-          </div>
-        </div>
-      </section>
-
-      <hr class="deviderLine">
-
-      <section class="zeppelinsHusSection">
-        <h3 class="heading2">Zeppelins hus</h3>
-        <div class="introIcons">
-          <div>
-            <i class="fa-solid fa-chair"></i>
-            <p>Siddepladser: 170</p>
-          </div>
-          
-          <div>
-            <i class="fa-solid fa-ruler"></i>
-            <p> Areal - væg til væg: 21x10m </p>
-          </div>
-          
-          <div>
-            <i class="fa-solid fa-house-user"></i>
-
-            <p>Rum: 25</p>
-          </div>
-          
-          <div>
-            <i class="fa-solid fa-ruler-combined"></i>
-            <p>Kvadratmeter: 720 m2</p>
-          </div>
-        </div>
 
 
-        <div class="indexInstagramGrid">
-          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
-            <img src="../assets/img/zeppelinInstagram1.png" alt="">
-          </a>
-          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
-            <img src="../assets/img/zeppelinInstagram2.png" alt="">
-          </a>
-          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
-            <img src="../assets/img/zeppelinInstagram3.png" alt="">
-          </a>
-          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
-            <img src="../assets/img/zeppelinInstagram4.png" alt="">
-          </a>
-          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
-            <img src="../assets/img/zeppelinInstagram5.png" alt="">
-          </a>
-          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
-            <img src="../assets/img/zeppelinInstagram6.png" alt="">
-          </a>
-          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
-            <img src="../assets/img/zeppelinInstagram7.png" alt="">
-          </a>
-        </div>
-
-        
-      </section>
 
 
       
@@ -198,10 +197,13 @@
     
     <script>
     import SmallHero from "../components/SmallHero.vue"; 
+    import Swiper from '../components/Swiper.vue';
+
     
     export default {
       components: {
         SmallHero,
+        Swiper,
       }};
   
     </script>

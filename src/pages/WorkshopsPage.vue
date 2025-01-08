@@ -27,11 +27,11 @@
         <div 
           v-for="workshop in workshops" 
           :key="workshop.id" 
-          class="workshopCard"
+          class="workshopCard cardAnimation"
         >
           <router-link :to="{ name: 'workshop', params: { id: workshop.id } }">
             <img :src="workshop.acf.image.url" :alt="workshop.title.rendered" />
-            <div class="workshopText">
+            <div class="workshopText cardAnimationText">
               <p class="workshopTitle">{{ workshop.title.rendered }}</p>
             </div>
           </router-link>

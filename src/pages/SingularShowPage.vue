@@ -1,9 +1,9 @@
 <template>
   <section class="enkelForestilling">
     <div v-if="forestilling">
-      <header class="heroForestilling">
-        <img class="heroForestillingImage" :src="forestilling.acf.image.url" :alt="forestilling.title.rendered" />
-        <h1 class="heroForestillingTitle">{{ forestilling.title.rendered }}</h1>
+      <header class="singularPageHero">
+        <img class="singularPageHeroImage" :src="forestilling.acf.image.url" :alt="forestilling.title.rendered" />
+        <h1 class="singularPageHeroTitle">{{ forestilling.title.rendered }}</h1>
       </header>
 
       <main>
@@ -146,34 +146,6 @@
   <style scoped>
 
 
-/* Hero section styles */
-.heroForestilling {
-  position: relative;
-  height: 80vh; 
-  overflow: hidden;
-}
-
-.heroForestillingImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; 
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.heroForestillingTitle {
-  position: absolute;
-  text-transform: uppercase;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 6rem;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  z-index: 1; 
-}
 
 /* Content section */
 .introIcons {

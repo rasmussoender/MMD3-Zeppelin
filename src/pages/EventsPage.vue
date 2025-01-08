@@ -13,11 +13,11 @@
         <div 
           v-for="event in events" 
           :key="event.id" 
-          class="eventCard"
+          class="eventCard cardAnimation"
         >
           <router-link :to="{ name: 'event', params: { id: event.id } }">
             <img :src="event.acf.image.url" :alt="event.title.rendered" />
-            <div class="eventText">
+            <div class="eventText cardAnimationText">
               <p class="eventTitle">{{ event.title.rendered }}</p>
               <p class="eventDate">{{ event.acf.date }}</p>
             </div>
