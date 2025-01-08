@@ -90,7 +90,7 @@
   background: #176C76;
   color: white;
   border-radius: 5px;
-  height: 35vh;
+  height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center; 

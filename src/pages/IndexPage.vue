@@ -56,10 +56,12 @@
   <hr class="deviderLine">
 
   <div class="schoolsAndParentsSection">
+    <h3 class="heading2">For skoler, Instutioner og Forældre</h3>
+
   <div class="imageContainer">
     <img src="../assets/img/forSkoler.jpg" alt="Stage with audience" class="ImageLeft">
     <div class="textBox schoolInfo">
-      <h2>Skoler og institutioner</h2>
+      <h4>Skoler og institutioner</h4>
       <p>Hos Zeppelin har vi et stærkt fokus på skoleelevers oplevelse og stræber efter at give dem den bedst mulige læring. Er du lærer, kan du finde praktiske oplysninger her.</p>
       <div>
 
@@ -71,7 +73,7 @@
   <div class="imageContainer">
     <img src="../assets/img/parentsZeppelin.jpg" alt="Audience enjoying a show" class="ImageRight">
     <div class="textBox parentInfo">
-      <h2>Forældre</h2>
+      <h4>Forældre</h4>
       <p>Hos Zeppelin har vi et stærkt fokus på skoleelevers oplevelse og stræber efter at give dem den bedst mulige læring. Er du lærer, kan du finde praktiske oplysninger her.</p>
       <a href="#" class="buttonType1">Til børnefamilier</a>
     </div>
@@ -282,11 +284,11 @@ export default {
   background-color: var(--primary-blue);
   color: white;
   border-radius: 5px;
-  max-width: 300px;
+  max-width: 400px;
 }
 
 .schoolInfo {
-  left: 20px;
+  left: 0px;
   width: 100%;
   left: auto;
   padding: 3rem 8rem;
@@ -294,14 +296,15 @@ export default {
 }
 
 .parentInfo {
-  right: 20px;
+  right: 0px;
   width: 100%;
   left: auto;
   padding: 3rem 8rem;
 }
 
-.textBox h2 {
+.textBox h4 {
   margin: 0;
+  font-size: 1.6rem;
 }
 
 .textBox p {
@@ -312,8 +315,6 @@ export default {
 
 
 /* Instagram galliri */
-
-
 .indexInstagramGrid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
