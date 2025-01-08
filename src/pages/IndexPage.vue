@@ -54,6 +54,32 @@
   </section>
 
   <hr class="deviderLine">
+
+  <div class="schoolsAndParentsSection">
+  <div class="imageContainer">
+    <img src="../assets/img/forSkoler.jpg" alt="Stage with audience" class="ImageLeft">
+    <div class="textBox schoolInfo">
+      <h2>Skoler og institutioner</h2>
+      <p>Hos Zeppelin har vi et stærkt fokus på skoleelevers oplevelse og stræber efter at give dem den bedst mulige læring. Er du lærer, kan du finde praktiske oplysninger her.</p>
+      <div>
+
+        <a href="#" class="buttonType1">For skoler og institutioner</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="imageContainer">
+    <img src="../assets/img/parentsZeppelin.jpg" alt="Audience enjoying a show" class="ImageRight">
+    <div class="textBox parentInfo">
+      <h2>Forældre</h2>
+      <p>Hos Zeppelin har vi et stærkt fokus på skoleelevers oplevelse og stræber efter at give dem den bedst mulige læring. Er du lærer, kan du finde praktiske oplysninger her.</p>
+      <a href="#" class="buttonType1">Til børnefamilier</a>
+    </div>
+  </div>
+</div>
+
+
+  <hr class="deviderLine">
   <section class="pictureGalleri">
   <h3 class="heading2">Følg os på Instagram</h3>
   <div class="indexInstagramGrid">
@@ -81,7 +107,20 @@
   </div>
   <p>@teatretzeppelin</p>
 </section>
-      </main>
+<hr class="deviderLine">
+<section class="newsLetter">
+  <div>
+    <h3 class="heading2">FÅ BESKED!</h3>
+    <h4>Når der kommer nyt fra os</h4>
+  </div>
+
+  <div class="emailForm">
+  <input type="email" id="email" placeholder="Skriv din mail.." required>
+  <button class="buttonType1" type="submit">Tilmeld</button>
+</div>
+
+</section>
+</main>
 </template>
 
 <script>
@@ -200,6 +239,76 @@ export default {
   
 }
 
+/* skoler og forælder sektion */
+.schoolsAndParentsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  margin: 0 auto;
+}
+
+.imageContainer p {
+  padding-bottom: 3rem;
+}
+
+.ImageRight {
+  display: block;
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.ImageLeft {
+  display: block;
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px; 
+  position: absolute;
+  right: 0; 
+}
+
+.textBox {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  background-color: var(--primary-blue);
+  color: white;
+  border-radius: 5px;
+  max-width: 300px;
+}
+
+.schoolInfo {
+  left: 20px;
+  width: 100%;
+  left: auto;
+  padding: 3rem 8rem;
+
+}
+
+.parentInfo {
+  right: 20px;
+  width: 100%;
+  left: auto;
+  padding: 3rem 8rem;
+}
+
+.textBox h2 {
+  margin: 0;
+}
+
+.textBox p {
+  margin: 10px 0 0;
+
+}
+
 
 
 /* Instagram galliri */
@@ -232,4 +341,43 @@ export default {
 .indexInstagramGrid a:nth-of-type(n+2) {
   grid-column: span 1;
 }
+
+/* Nyhedsbrev */
+.newsLetter {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 4rem;
+}
+
+.emailForm {
+  gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  width: 50vw;
+  padding: 0.5rem;
+  border-radius: 5px;
+
+}
+
+.emailForm input {
+  width: 70%;
+  padding: 1.5rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  background: var(--primary-text-dark);
+}
+
+.emailForm button {
+  padding: 1.5rem 3rem;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
 </style>

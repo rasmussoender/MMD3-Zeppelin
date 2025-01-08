@@ -4,47 +4,71 @@
         <div id="footerLeft">
          
             <img src="../assets/img/zeppelinLogo.svg" alt="">
-          <p>Valdemarsgade 15</p>
-          <p>1665 Kbh V</p>
-          <p><a href="">+45 44 33 04 78</a></p>
-         
-          <p>Administration</p>
-          <p>man-fre 9:00-16:00</p>
-          <p><a href="">post@zeppelin.dk</a></p>
-          <p>Billetbestilling</p>
-          <p>man-fre 9:00-15:00</p>
-          <p><a href="">billet@zeppelin.dk</a></p>
+            <div>
+                <p>Valdemarsgade 15</p>
+                <p>1665 Kbh V</p>
+                <p><a class="footerContactLink" href="tel:+4544330478">+45 44 33 04 78</a></p>
+
+            </div>
+            <div>
+             <p>Administration</p>
+             <p>man-fre 9:00-16:00</p>
+             <p><a class="footerContactLink" href="mailto:post@zeppelin.dk">post@zeppelin.dk</a></p>
+
+            </div>
+            <div>
+
+                <p>Billetbestilling</p>
+                <p>man-fre 9:00-15:00</p>
+                <p><a class="footerContactLink" href="mailto:billet@zeppelin.dk">billet@zeppelin.dk</a></p>
+
+            </div>
        
         </div>
         <div class="FooterDivBund">
-          <div><h3>SCENEN OG SAMVÆRET</h3>
-            <p>Teater forestillinger</p>
-            <p>Events</p>
-            <p>kor</p></div>
+            <div>
+            <h3>SCENEN OG SAMVÆRET</h3>
+            <p><router-link to="/forestillinger">Teater forestillinger</router-link></p>
+            <p><router-link to="/events">Events</router-link></p>
+            <p><router-link to="/kor">kor</router-link></p>
+            </div>
+
             <div><h3>MEDIER</h3>
-            <p>Artikler & Podcast</p></div>
+            <p><router-link to="/artiklerPodcasts">Artikler & Podcast</router-link></p>
+            </div>
         </div>
         <div class="FooterDivBund">
             <div><h3>I TEATERET</h3>
-            <p>Information til besøgende</p></div>
+            <p><router-link to="/InformationBesogende">Information til besøgende</router-link></p></div>
+            
             <div><h3>OM TEATERET</h3>
-            <p>Om os</p></div>
+            <p><router-link to="/omOs">Om os</router-link></p></div>
         </div>
         <div>
             <h3>BØRN OG UNGE</h3>
-            <p>For Børnefamilier</p>
-            <p>For skoler og instituitioner</p>
-            <p>Workshops</p>
-            <p>Undervisningsmateriale</p>
+            <p><router-link to="/familier">For Børnefamilier</router-link></p>
+            <p><router-link to="/skolerInstitutioner">For skoler og instituitioner</router-link></p>
+            <p><router-link to="/workshops">Workshops</router-link></p>
+            <p><router-link to="/undervisningsmateriale">Undervisningsmateriale</router-link></p>
         </div>
     </section>
-    <hr>
+    <hr class="footerLine">
     <div class="ikoner">
-    <i class="fa-brands fa-square-instagram"></i>
-    <i class="fa-brands fa-square-x-twitter"></i>
-    <i class="fa-brands fa-facebook"></i>
-    <i class="fa-brands fa-youtube"></i>
-    <i class="fa-brands fa-linkedin"></i>
+        <a href="https://www.instagram.com/teatretzeppelin/" target="_blank">
+        <i class="fa-brands fa-square-instagram"></i>
+    </a>
+    <a href="https://www.tiktok.com/@teatretzeppelin?" target="_blank">
+        <i class="fa-brands fa-tiktok"></i>
+    </a>
+    <a href="https://www.facebook.com/TeatretZeppelin" target="_blank">
+        <i class="fa-brands fa-square-facebook"></i>
+    </a>
+    <a href="https://www.youtube.com/channel/UCQbwvU3WUDAVt06q6dRqdfw" target="_blank">
+        <i class="fa-brands fa-square-youtube"></i>
+    </a>
+    <a href="https://www.linkedin.com/company/teatret-zeppelin/" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+    </a>
 </div>
     </footer>  
 </template>
@@ -53,13 +77,33 @@
 </script>
 
 <style scoped>
+
+footer {
+    background-color: #1E1E1E; 
+    color: white; 
+}
 section {
-    background-color: #1E1E1E;
+    padding-top: 4rem;
     color: #FFFFFF;
     display: flex;
     margin-top: 3rem;
     justify-content: space-around;
     padding-bottom: 2rem;
+
+}
+
+.footerContactLink {
+    color: var(--primary-yellow);
+}
+
+footer section a {
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+footer section a:hover, footer section a.router-link-active {
+    color: var(--primary-yellow);
 }
  
 section a {
@@ -76,13 +120,14 @@ footer section>div {
  
 #footerLeft {
     display: flex;
-    align-items: center;
+    align-items: left;
     flex-direction: column;
+    gap: 1rem;
 }
- 
+
 footer section>.FooterDivBund {
     justify-content: space-between;
-    margin-bottom: 7rem;
+    margin-bottom: 3rem;
 }
 
 #footerLeft img {
@@ -90,15 +135,37 @@ footer section>.FooterDivBund {
 }
 
 .ikoner {
+  color: white;
   display: flex;
-  justify-content: space-around;
+  justify-content: center; 
   align-items: center;
   width: 100%;
+  background-color: #1E1E1E;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  gap: 1rem; 
 }
 
 .ikoner i {
-  font-size: 2rem;
+text-decoration: none;
+color: white;
+  font-size: 3rem;
   margin: 0 1rem;
+  transition: color 0.3s ease;
+
+}
+
+.ikoner i:hover {
+    color: var(--primary-yellow);
+}
+
+.footerLine {
+    border: 0; 
+    height: 2px; 
+    margin-left: 4rem;
+    margin-right: 4rem;
+    background-color: white; 
+    color: white;
 }
 
 </style>
