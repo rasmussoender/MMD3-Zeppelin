@@ -43,71 +43,48 @@
           <div>
 
             <i class="fa-solid fa-quote-left"></i>
-            <p>Oplagt begynderforestilling, der kan give appetit på mere hos det yngste publikum. Det er vel svært at finde bedre børneteater til denne aldersgruppe og det fortjener Teater Next stor ros for at satse på</p>
-            <h5>- Set på Scenen</h5>
+            <p>{{ forestilling.acf.review.reviewtext }}</p>
+            <h5>- {{ forestilling.acf.review.author }}</h5>
           </div>
         </section>
 
         <section class="ensembleSection">
-          <h3 class="heading2">Ensemble</h3>
-          <div class="ensembleContainer">
-            <div>
-              <img src="../assets/img/placeholderPerson.jpg" alt="">
-              <h4>Sara Line Møller Olsen</h4>
-              <p>Medvirkende</p>
-            </div>
-            
-            <div>
-              <img src="../assets/img/placeholderPerson.jpg" alt="">
-              <h4>Sara Line Møller Olsen</h4>
-              <p>Medvirkende</p>
-            </div>
-            
-            <div>
-              <img src="../assets/img/placeholderPerson.jpg" alt="">
-              <h4>Sara Line Møller Olsen</h4>
-              <p>Medvirkende</p>
-            </div>
-            
-            <div>
-              <img src="../assets/img/placeholderPerson.jpg" alt="">
-              <h4>Sara Line Møller Olsen</h4>
-              <p>Medvirkende</p>
-            </div>
-            
-            <div>
-              <img src="../assets/img/placeholderPerson.jpg" alt="">
-              <h4>Sara Line Møller Olsen</h4>
-              <p>Medvirkende</p>
-            </div>
-          </div>
-          </section>
+  <h3 class="heading2">Ensemble</h3>
+  <div class="ensembleContainer">
+    <div v-for="([key, person], index) in Object.entries(forestilling.acf.ensemble.ensembleperson)" :key="index">
+      <img :src="person.personpicture || '../assets/img/placeholderPerson.jpg'" />
+      <h4>{{ person.personname }}</h4>
+      <p>{{ person.personrole }}</p>
+    </div>
+  </div>
+</section>
+
 
           <section class="pictureGalleri">
       <h3 class="heading2">Galleri fra forestillingen</h3>
       <div class="indexInstagramGrid">
-          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
-            <img src="../assets/img/zeppelinInstagram1.png" alt="">
-          </a>
-          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
-            <img src="../assets/img/zeppelinInstagram2.png" alt="">
-          </a>
-          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
-            <img src="../assets/img/zeppelinInstagram3.png" alt="">
-          </a>
-          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
-            <img src="../assets/img/zeppelinInstagram4.png" alt="">
-          </a>
-          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
-            <img src="../assets/img/zeppelinInstagram5.png" alt="">
-          </a>
-          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
-            <img src="../assets/img/zeppelinInstagram6.png" alt="">
-          </a>
-          <a href="https://www.instagram.com/teatretzeppelin" target="_blank">
-            <img src="../assets/img/zeppelinInstagram7.png" alt="">
-          </a>
-      </div>
+            <div class="imageContainer">
+              <img src="../assets/img/ZeppelinOm1.jpg" alt="">
+            </div>
+            <div class="imageContainer">
+              <img src="../assets/img/ZeppelinOm2.jpg" alt="">
+            </div>
+            <div class="imageContainer">
+              <img src="../assets/img/ZeppelinOm3.jpg" alt="">
+            </div>
+            <div class="imageContainer">
+              <img src="../assets/img/ZeppelinOm4.jpg" alt="">
+            </div>
+            <div class="imageContainer">
+              <img src="../assets/img/ZeppelinOm5.jpg" alt="">
+            </div>
+            <div class="imageContainer">
+              <img src="../assets/img/ZeppelinOm6.jpg" alt="">
+            </div>
+            <div class="imageContainer">
+              <img src="../assets/img/ZeppelinOm7.jpg" alt="">
+            </div>
+          </div>
       </section>
         </main>
     </div>
@@ -135,6 +112,8 @@
           const response = await fetch(`https://zeppelin-teater.rasmuspedersen.net/wp-json/wp/v2/posts/${id}`);
           const data = await response.json();
           this.forestilling = data; 
+          console.log(this.forestilling.acf.ensemble.ensembleperson); 
+
         } catch (error) {
           console.error("Der opstod en fejl!", error);
         }
@@ -212,28 +191,30 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 1rem; 
+
 }
 
-.grid-item {
+.indexInstagramGrid:nth-of-type(1) {
+  padding-bottom: 1rem;
+}
+
+.indexInstagramGrid div {
+  width: 100%;
+  height: 15rem;
+}
+
+.indexInstagramGrid div img {
   display: block;
-  position: relative; 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.indexInstagramGrid a img {
-  display: block;    
-  width: 100%;       
-  height: 100%;      
-  object-fit: cover; 
-}
-
-.indexInstagramGrid a:nth-of-type(1) {
+.indexInstagramGrid div:nth-of-type(1) {
   grid-column: span 2; 
   grid-row: span 2;    
-  height: 100%;        
-}
+  height: 31rem;
 
-.indexInstagramGrid a:nth-of-type(n+2) {
-  grid-column: span 1;
 }
 
 .reviewSection {
