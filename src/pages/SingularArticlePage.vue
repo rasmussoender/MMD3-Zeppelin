@@ -11,9 +11,9 @@
         <div class="articlePodcastTextSection">
             <h2 class="heading2">{{ articlePodcast.acf.title }}</h2>
             <p class="articlePodcastAuthor">Af {{ articlePodcast.acf.author }}</p>
-            <p class="articlePodcastDate">{{ articlePodcast.date }}</p>
+            <p class="articlePodcastDate">{{ articlePodcast.acf.date }}</p>
             <div>
-              <h3></h3>
+              <h3>{{ articlePodcast.acf.texttitle1 }}</h3>
               <p>{{ articlePodcast.acf.text1 }}</p>
             </div>
             <div>
@@ -22,8 +22,18 @@
             </div>
 
             <div>
+              <img :src="articlePodcast.acf.articlepicture" alt="">
+            </div>
+
+
+            <div>
               <h3>{{ articlePodcast.acf.texttitle3 }}</h3>
               <p>{{ articlePodcast.acf.text3 }}</p>
+            </div>
+
+            <div>
+              <h3>{{ articlePodcast.acf.texttitle4 }}</h3>
+              <p>{{ articlePodcast.acf.text4 }}</p>
             </div>
 
 
@@ -70,6 +80,12 @@
 .articlePodcastSection {
   padding-left: 10rem;
   padding-right: 10rem;
+}
+.articlePodcastSection div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+
 }
 
 

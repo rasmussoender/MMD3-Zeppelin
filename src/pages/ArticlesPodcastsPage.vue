@@ -29,7 +29,7 @@
  }}</p>
         <div class="articlePodcastAuthorDate">
           <p class="articlePodcastAuthor">Af <span>{{ articlePodcast.acf.author }}</span></p>
-          <p class="articlePodcastDate">{{ articlePodcast.date }}</p>
+          <p class="articlePodcastDate">{{ articlePodcast.acf.date }}</p>
         </div>
       </div>
     </router-link>
@@ -84,7 +84,6 @@ export default {
 .articlePodcastCard {
 
   border: 1px solid #ccc;
-  
   position: relative;
   overflow: hidden;
   width: 100%; 
@@ -103,7 +102,8 @@ export default {
 }
 
 .articlePodcastText {
-  padding: 15px;
+  padding: 1rem;
+  height: 25vh;
 }
 
 .articlePodcastCategory {
@@ -142,6 +142,7 @@ export default {
 
 .articlePodcastDate {
   font-style: italic;
+  padding-right: 2rem;
 }
 
 /* Hover effect */

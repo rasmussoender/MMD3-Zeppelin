@@ -10,16 +10,17 @@
         <div class="introIcons">
           <div>
             <i class="fa-solid fa-calendar-days"></i>
-            <p>{{ forestilling.acf.date }}</p>
-          </div>
-          
-          <div>
-            <i class="fa-solid fa-clock"></i>
-            <p>{{ forestilling.acf.price }} kr.</p>
+            <p>{{ forestilling.acf.datestart }} - {{ forestilling.acf.dateend }} </p>
           </div>
           
           <div>
             <i class="fa-solid fa-money-bill-wave"></i>
+            <p>{{ forestilling.acf.price }} kr.</p>
+          </div>
+          
+          <div>
+            <i class="fa-solid fa-clock"></i>
+
             <p>{{ forestilling.acf.time }} min</p>
           </div>
           
@@ -33,7 +34,7 @@
           <img src="../assets/img/kalenderPlaceholder.png" alt="">
           <div>
             <h2 class="title">{{ forestilling.title.rendered }}</h2>
-            <h3 class="subtitle">Hjertevarm, sanselig og musikalsk forestilling for børn fra 2 til 5 år.</h3>
+            <h3 class="subtitle">{{ forestilling.acf.forestillingsubtitle }}</h3>
             <p class="description">{{ forestilling.acf.description }}</p>
             <a :href="forestilling.acf.ticketurl" target="_blank" class="buttonType1">Køb billet</a>
           </div>
@@ -51,41 +52,100 @@
         <section class="ensembleSection">
   <h3 class="heading2">Ensemble</h3>
   <div class="ensembleContainer">
-    <div v-for="([key, person], index) in Object.entries(forestilling.acf.ensemble.ensembleperson)" :key="index">
-      <img :src="person.personpicture || '../assets/img/placeholderPerson.jpg'" />
-      <h4>{{ person.personname }}</h4>
-      <p>{{ person.personrole }}</p>
-    </div>
-  </div>
-</section>
+            <div>
+              <img :src="forestilling.acf.ensemble.ensembleperson1.personpicture1 || '../src/assets/img/placeholderPerson.jpg'" alt="">
+              <h4>{{ forestilling.acf.ensemble.ensembleperson1.personname1 }}</h4>
+              <p>{{ forestilling.acf.ensemble.ensembleperson1.personrole1}}</p>
+            </div>
 
+            <div>
+              <img :src="forestilling.acf.ensemble.ensembleperson2.personpicture2 || '../src/assets/img/placeholderPerson.jpg'" alt="">
+              <h4>{{ forestilling.acf.ensemble.ensembleperson2.personname2 }}</h4>
+              <p>{{ forestilling.acf.ensemble.ensembleperson2.personrole2}}</p>
+            </div>
 
-          <section class="pictureGalleri">
-      <h3 class="heading2">Galleri fra forestillingen</h3>
-      <div class="indexInstagramGrid">
-            <div class="imageContainer">
-              <img src="../assets/img/ZeppelinOm1.jpg" alt="">
+            <div>
+              <img :src="forestilling.acf.ensemble.ensembleperson3.personpicture3 || '../src/assets/img/placeholderPerson.jpg'" alt="">
+              <h4>{{ forestilling.acf.ensemble.ensembleperson3.personname3 }}</h4>
+              <p>{{ forestilling.acf.ensemble.ensembleperson3.personrole3}}</p>
             </div>
-            <div class="imageContainer">
-              <img src="../assets/img/ZeppelinOm2.jpg" alt="">
+
+            <div>
+              <img :src="forestilling.acf.ensemble.ensembleperson4.personpicture4 || '../src/assets/img/placeholderPerson.jpg'" alt="">
+              <h4>{{ forestilling.acf.ensemble.ensembleperson4.personname4 }}</h4>
+              <p>{{ forestilling.acf.ensemble.ensembleperson4.personrole4}}</p>
             </div>
-            <div class="imageContainer">
-              <img src="../assets/img/ZeppelinOm3.jpg" alt="">
+
+            <div>
+              <img :src="forestilling.acf.ensemble.ensembleperson5.personpicture5 || '../src/assets/img/placeholderPerson.jpg'" alt="">
+              <h4>{{ forestilling.acf.ensemble.ensembleperson5.personname5 }}</h4>
+              <p>{{ forestilling.acf.ensemble.ensembleperson5.personrole5}}</p>
             </div>
-            <div class="imageContainer">
-              <img src="../assets/img/ZeppelinOm4.jpg" alt="">
+
+            <div>
+              <img src="../assets/img/placeholderPerson.jpg" alt="">
+              <h4>{{ forestilling.acf.ensemble.ensembleperson6.personname6 }}</h4>
+              <p>{{ forestilling.acf.ensemble.ensembleperson6.personrole6}}</p>
             </div>
-            <div class="imageContainer">
-              <img src="../assets/img/ZeppelinOm5.jpg" alt="">
+
+            <div>
+              <img :src="forestilling.acf.ensemble.ensembleperson7.personpicture7 || '../src/assets/img/placeholderPerson.jpg'" alt="">
+              <h4>{{ forestilling.acf.ensemble.ensembleperson7.personname7 }}</h4>
+              <p>{{ forestilling.acf.ensemble.ensembleperson7.personrole7}}</p>
             </div>
-            <div class="imageContainer">
-              <img src="../assets/img/ZeppelinOm6.jpg" alt="">
-            </div>
-            <div class="imageContainer">
-              <img src="../assets/img/ZeppelinOm7.jpg" alt="">
+
+            <div>
+              
+              <img :src="forestilling.acf.ensemble.ensembleperson8.personnpicture8 || '../src/assets/img/placeholderPerson.jpg'" alt="">
+              <h4>{{ forestilling.acf.ensemble.ensembleperson8.personname8 }}</h4>
+              <p>{{ forestilling.acf.ensemble.ensembleperson8.personrole8 }}</p>
             </div>
           </div>
       </section>
+
+      <div class="indexInstagramContainer">
+        <h3 class="heading2">Billeder fra teatret</h3>
+
+        <div class="indexInstagramGrid">
+  <div class="imageContainer">
+    <img 
+      :src="forestilling.acf.galleri.galleriimage1 || '../src/assets/img/ZeppelinOm1.jpg'" 
+      alt="">
+  </div>
+  <div class="imageContainer">
+    <img 
+      :src="forestilling.acf.galleri.galleriimage2 || '../src/assets/img/galleriPlaceholder.jpg'" 
+      alt="">
+  </div>
+  <div class="imageContainer">
+    <img 
+      :src="forestilling.acf.galleri.galleriimage3 || '../src/assets/img/galleriPlaceholder3.jpg'" 
+      alt="">
+  </div>
+  <div class="imageContainer">
+    <img 
+      :src="forestilling.acf.galleri.galleriimage4 || '../src/assets/img/galleriplacerholder2.jpg'" 
+      alt="">
+  </div>
+  <div class="imageContainer">
+    <img 
+      :src="forestilling.acf.galleri.galleriimage5 || '../src/assets/img/ZeppelinOm5.jpg'" 
+      alt="">
+  </div>
+  <div class="imageContainer">
+    <img 
+      :src="forestilling.acf.galleri.galleriimage6 || '../src/assets/img/ZeppelinOm6.jpg'" 
+      alt="">
+  </div>
+  <div class="imageContainer">
+    <img 
+      :src="forestilling.acf.galleri.galleriimage7 || '../src/assets/img/ZeppelinOm7.jpg'" 
+      alt="">
+  </div>
+  
+</div>
+          </div>
+
         </main>
     </div>
     
@@ -112,7 +172,6 @@
           const response = await fetch(`https://zeppelin-teater.rasmuspedersen.net/wp-json/wp/v2/posts/${id}`);
           const data = await response.json();
           this.forestilling = data; 
-          console.log(this.forestilling.acf.ensemble.ensembleperson); 
 
         } catch (error) {
           console.error("Der opstod en fejl!", error);
@@ -127,6 +186,9 @@
 
 
 /* Content section */
+.heading2 {
+  padding-top: 2rem;
+}
 .introIcons {
   display: flex;
   justify-content: space-around;
@@ -166,17 +228,25 @@
 .ensembleContainer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-
+  gap: 1rem;
 }
 
-.ensembleContainer  div {
+.ensembleContainer div {
   padding: 1rem;
 }
 
-.ensembleSection img {
+.ensembleSection {
+  position: relative;
   width: 100%;
-  object-fit: contain;
-  height: auto;
+}
+
+.ensembleSection img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .ensembleSection h4, .ensembleSection p {
@@ -253,6 +323,11 @@
   padding-right: 10rem;
 
 }
+
+.ensembleContainer {
+  grid-template-columns: repeat(3, 1fr);
+}
+
   
 
 
@@ -278,6 +353,11 @@
 
 }
 
+.ensembleContainer {
+  grid-template-columns: repeat(2, 1fr);
+  
+}
+
 
 .indexInstagramGrid {
     grid-template-columns: repeat(2, 1fr);
@@ -292,10 +372,6 @@
     grid-column: span 1; 
     grid-row: span 1;   
   }
-
-
-
-
 }
 
 @media (max-width: 400px) {
@@ -305,10 +381,11 @@
 
 }
 
+.ensembleContainer {
+  grid-template-columns: repeat(1, 1fr);
 }
 
-
-
+}
 
   </style>
   

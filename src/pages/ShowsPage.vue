@@ -15,7 +15,7 @@
             <img :src="forestilling.acf.image.url" :alt="forestilling.title.rendered" />
             <div class="forestillingText cardAnimationText">
               <p class="forestillingTitle">{{ forestilling.title.rendered }}</p>
-              <p class="forestillingDate">{{ forestilling.acf.date }}</p>
+              <p class="forestillingDate">{{ forestilling.acf.datestart }} - {{ forestilling.acf.dateend }} </p>
             </div>
           </router-link>
         </div>

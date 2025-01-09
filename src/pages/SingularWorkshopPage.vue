@@ -20,12 +20,12 @@
           
           <div>
             <i class="fa-solid fa-money-bill-wave"></i>
-            <p>{{ workshop.acf.price }} kr</p>
+            <p>{{ workshop.acf.price }} </p>
           </div>
           
           <div>
             <i class="fa-solid fa-users"></i>
-            <p>{{ workshop.acf.class }} klasse</p>
+            <p>{{ workshop.acf.class }} </p>
           </div>
         </div>
         <hr class="deviderLine">
