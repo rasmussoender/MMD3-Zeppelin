@@ -106,6 +106,38 @@
   padding-top: 2rem;
 }
 
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1000px) {
+  .reviewSection {
+  padding-left: 10rem;
+  padding-right: 10rem;
+
+}
+  
+}
+
+@media (max-width: 800px) {
+
+}
+
+@media (max-width: 600px) {
+  .reviewSection {
+  padding-left: 5rem;
+  padding-right: 5rem;
+
+}
+}
+
+@media (max-width: 400px) {
+  .reviewSection {
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+}
+}
+
 
 
 

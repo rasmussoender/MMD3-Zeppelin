@@ -21,6 +21,7 @@ body {
 
 p {
   line-height: 1.5;
+  font-size: var(--desktopText-regular);
 }
 
 
@@ -94,7 +95,7 @@ transform: scale(1.05);
   .introText {
   font-size: var(--introSectionFont);
   padding: 10rem;
-  padding-top: 0;
+  padding-top: 0 !important;
   padding-bottom: 2rem;
   }
 
@@ -240,3 +241,56 @@ transform: scale(1.05);
     z-index: 2; 
   }
 
+
+
+  @media (max-width: 1200px) {
+  }
+  
+  @media (max-width: 1000px) {
+
+   .introText {
+    font-size: 20px;
+    padding: 0;
+   }
+
+
+    .mediaTextSection {
+      display: flex;
+      flex-direction: column;
+
+    }
+
+    .mediaTextSection img, .mediaTextSection video {
+      width: 100%;
+
+    }
+
+  }
+  
+  @media (max-width: 800px) {
+    main {
+
+      padding: var(--spacing-medium);
+      
+      }
+
+      p {
+        font-size: var(--mediumText-regular);
+      }
+
+      .introText {
+        width: 100%;
+      }
+    
+    }
+  
+  @media (max-width: 600px) {
+    main {
+
+      padding: var(--spacing-small);
+      
+      }  }
+  
+  @media (max-width: 400px) {
+  }
+  

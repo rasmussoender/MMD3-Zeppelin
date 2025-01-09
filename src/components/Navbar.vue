@@ -7,7 +7,6 @@
     <div class="navItems">
       <li><router-link to="/">Forside</router-link></li>
       <li><router-link to="/forestillinger" >Forestillinger</router-link></li>
-      <li><router-link to="/events">Events</router-link></li>
       <a href="https://teaterbilletter.dk/forestillinger?venueCodes=VN0000129" target="_blank" class="navButton">Køb billet</a>
       <div class="menu-icon" @click="toggleMenu">
         <i class="fas fa-bars" id="burger-menu"></i>
@@ -35,7 +34,7 @@
         <hr class="navDeviderLine">
         <div class="burgerMenuItemWrapper">
           <li><router-link to="/familier" @click="toggleMenu">For børnefamilier</router-link></li>
-          <li><router-link to="/skolerInstitutioner" @click="toggleMenu">For skoler og institutioner</router-link></li>
+          <li><router-link to="/skolerInstitutioner" @click="toggleMenu">For skoler</router-link></li>
           <li><router-link to="/workshops" @click="toggleMenu">Workshops</router-link></li>
           <li><router-link to="/undervisningsmateriale" @click="toggleMenu">Undervisningsmateriale</router-link></li>
         </div>
@@ -212,6 +211,74 @@
 
 .overlay ul li a:hover {
   color: var(--primary-yellow); 
+}
+
+@media (max-width: 1200px) {
+  .burgerMenuItemWrapper {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .overlay {
+    width: 100%;
+    padding: 0;
+    padding-top: 2rem;
+  }
+  .navItems {
+    gap: 2rem;
+}
+.burgerMenuItemWrapper {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .navDeviderLine {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .overlay ul li h3 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1rem;
+  }
+
+  .overlay ul li a {
+    font-size: 14px;
+  }
+
+  
+
+}
+
+@media (max-width: 800px) {
+  .navItems {
+
+    gap: 1rem;
+}
+
+.navItems li {
+  display: none;
+}
+
+
+}
+
+@media (max-width: 600px) {
+  .overlay ul li a {
+    font-size: 12px;
+  }
+  .navItems {
+    gap: .5rem;   
+}
+.navItems a {
+  display: none;
+}
+
+}
+
+@media (max-width: 400px) {
 }
 
 </style>

@@ -46,6 +46,30 @@ font-size: 1.5em;
 margin-bottom: 2em;
 }
 
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1000px) {
+  .hero-content {
+left: 50%;
+}
+
+  
+}
+
+@media (max-width: 800px) {
+
+
+}
+
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 400px) {
+
+}
+
 
 
   </style>

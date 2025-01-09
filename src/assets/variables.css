@@ -7,14 +7,23 @@
 
 
     /* Spacing */
-    --spacing-small: 0.5rem;
-    --spacing-medium: 1rem;
+    --spacing-small: 1rem;
+    --spacing-medium: 2rem;
     --spacing-large: 4rem;
 
     /* Font */
     --heading-2: 40px;
-
     --introSectionFont: 25px;
 
+
+    --desktopText-regular: 18px;
+
+    --mediumText-regular: 15px;
+
+    --mobileText-regular: 13px;
+
+
+
   }
+
 

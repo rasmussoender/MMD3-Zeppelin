@@ -5,20 +5,23 @@
       :heroTitle="'Forestillinger'"
     />
   </div>
-  <section class="forestillingerIndex">
-    <p class="introText">Teatret Zeppelin tilbyder en række spændende og meningsfulde forestillinger, der appellerer til både børn og unge. Med mere end 40 års erfaring skaber teatret forestillinger, der udfordrer og engagerer publikum fra store til små </p>
-    <div class="forestillingerList">
-      <div v-for="forestilling in forestillinger" :key="forestilling.id" class="forestillingCard cardAnimation">
-        <router-link :to="{ name: 'forestilling', params: { id: forestilling.id } }">
-          <img :src="forestilling.acf.image.url" :alt="forestilling.title.rendered" />
-          <div class="forestillingText cardAnimationText">
-            <p class="forestillingTitle">{{ forestilling.title.rendered }}</p>
-            <p class="forestillingDate">{{ forestilling.acf.date }}</p>
-          </div>
-        </router-link>
+  <main>
+
+    <section class="forestillingerIndex">
+      <p class="introText">Teatret Zeppelin tilbyder en række spændende og meningsfulde forestillinger, der appellerer til både børn og unge. Med mere end 40 års erfaring skaber teatret forestillinger, der udfordrer og engagerer publikum fra store til små </p>
+      <div class="forestillingerList">
+        <div v-for="forestilling in forestillinger" :key="forestilling.id" class="forestillingCard cardAnimation">
+          <router-link :to="{ name: 'forestilling', params: { id: forestilling.id } }">
+            <img :src="forestilling.acf.image.url" :alt="forestilling.title.rendered" />
+            <div class="forestillingText cardAnimationText">
+              <p class="forestillingTitle">{{ forestilling.title.rendered }}</p>
+              <p class="forestillingDate">{{ forestilling.acf.date }}</p>
+            </div>
+          </router-link>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   </template>
   
@@ -55,8 +58,7 @@ export default {
   <style scoped>
 /* Forestilling cards */
 .forestillingerList {
-  padding: 4rem;
-  padding-top: 0;
+  padding-top: 2rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center; 
@@ -64,7 +66,7 @@ export default {
 .forestillingCard {
   position: relative;
   overflow: hidden;
-  width: 300px; 
+  width: 90%; 
   height: 50vh;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -103,5 +105,40 @@ export default {
 .introText {
   padding-top: 4rem;
 }
+
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1000px) {
+
+  
+
+}
+
+@media (max-width: 800px) {
+  .forestillingerList {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.forestillingCard {
+  width: 100%;
+}
+
+}
+
+@media (max-width: 600px) {
+  .forestillingerList {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+}
+
+@media (max-width: 400px) {
+
+}
+
+
+
 
 </style>

@@ -193,7 +193,7 @@ export default {
 .forestillingCard {
   position: relative;
   overflow: hidden;
-  width: 300px; 
+  width: 90%; 
   height: 50vh;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -373,6 +373,119 @@ export default {
   cursor: pointer;
 }
 
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1000px) {
+
+
+.buttonWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+
+    .imageContainer {
+    position: static; 
+    height: auto; 
+  }
+
+  .textBox {
+    position: static;
+    transform: none; 
+    top: auto; 
+    margin-top: 1rem; 
+    width: 100%; 
+    max-width: none; 
+  }
+
+  .ImageRight,
+  .ImageLeft {
+    width: 100%; 
+    height: 60vh; 
+    position: static; 
+  }
+
+  .schoolsAndParentsSection {
+    flex-direction: column; 
+    gap: 2rem;
+
+
+  }
+
+  .schoolInfo {
+  left: auto;
+  padding: 3rem 0;
+
+}
+
+.schoolInfo p, .schoolInfo h4, .parentInfo p, .parentInfo h4 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+}
+.schoolInfo a, .parentInfo a  {
+  margin: 2rem;
+}
+
+.parentInfo {
+  right: 0px;
+  width: 100%;
+  left: auto;
+  padding: 3rem 0;
+}
+
+
+}
+
+@media (max-width: 800px) {
+  .forestillingerList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.forestillingCard {
+  width: 100%;
+}
+
+.newsLetter {
+  flex-direction: column;
+  align-items: center;
+}
+
+.emailForm button {
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+}
+
+.emailForm input {
+  padding: 0.75rem ;
+
+}
+}
+
+@media (max-width: 600px) {
+  .emailForm {
+    flex-direction: column;
+  }
+  .emailForm {
+    width: 100%;
+  }
+
+    .forestillingerList {
+  grid-template-columns: repeat(1, 1fr);
+    }
+
+
+
+
+
+}
+
+@media (max-width: 400px) {
+}
 
 
 

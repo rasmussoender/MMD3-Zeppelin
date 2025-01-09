@@ -168,4 +168,49 @@ color: white;
     color: white;
 }
 
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1000px) {
+
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+}
+
+@media (max-width: 800px) {
+    section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+    }
+
+
+    .ikoner i {
+    font-size: 2rem;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .ikoner i {
+    font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .ikoner i {
+    font-size: 1.2rem;
+    }
+
+}
+
 </style>
