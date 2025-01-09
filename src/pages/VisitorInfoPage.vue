@@ -209,6 +209,50 @@ export default {
       width: 150%;
       border: none;
     }
+
+    @media (max-width: 1200px) {
+      .LocalNav {
+
+
+width: 100%; 
+
+}
+
+}
+
+@media (max-width: 1000px) {
+  .googleMapsSection {
+      width: 100%;
+      height: 20rem;
+      border: none;
+    }
+
+    .mediaTextSection {
+    gap: 0;
+    padding-top: 0;
+
+  }
+
+
+  
+}
+
+@media (max-width: 800px) {
+
+
+}
+
+@media (max-width: 600px) {
+  .LocalNav {
+    display: none;
+  }
+
+}
+
+@media (max-width: 400px) {
+
+}
+
     
 
 

@@ -244,6 +244,71 @@
 }
 
 
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1000px) {
+  .reviewSection {
+  padding-left: 10rem;
+  padding-right: 10rem;
+
+}
+  
+
+
+}
+
+@media (max-width: 800px) {
+  .textCalenderSection {
+    flex-direction: column;
+    padding-bottom: 2rem;
+  }
+
+  .textCalenderSection img {
+
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .reviewSection {
+  padding-left: 5rem;
+  padding-right: 5rem;
+
+}
+
+
+.indexInstagramGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .indexInstagramGrid a:nth-of-type(1) {
+    grid-column: span 2;
+    grid-row: span 1;    
+  }
+
+  .indexInstagramGrid a:nth-of-type(n+2) {
+    grid-column: span 1; 
+    grid-row: span 1;   
+  }
+
+
+
+
+}
+
+@media (max-width: 400px) {
+  .reviewSection {
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+}
+
+}
+
+
+
 
   </style>
   

@@ -73,5 +73,51 @@
 }
 
 
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1000px) {
+  .articlePodcastSection {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+
+  
+}
+
+@media (max-width: 800px) {
+  .articlePodcastSection {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+
+
+}
+
+@media (max-width: 600px) {
+  .articlePodcastSection {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+
+
+}
+
+@media (max-width: 400px) {
+  .articlePodcastSection {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+
+}
+
+
+
+
   </style>
   

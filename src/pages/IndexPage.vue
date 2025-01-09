@@ -438,6 +438,7 @@ export default {
 }
 
 
+
 }
 
 @media (max-width: 800px) {
@@ -477,6 +478,21 @@ export default {
     .forestillingerList {
   grid-template-columns: repeat(1, 1fr);
     }
+
+    .indexInstagramGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .indexInstagramGrid a:nth-of-type(1) {
+    grid-column: span 2;
+    grid-row: span 1;    
+  }
+
+  .indexInstagramGrid a:nth-of-type(n+2) {
+    grid-column: span 1; 
+    grid-row: span 1;   
+  }
+
 
 
 

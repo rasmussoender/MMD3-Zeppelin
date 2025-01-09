@@ -115,7 +115,7 @@
 }
 
 .workshopTextSection {
-    width: 80%;
+    width: 100%;
 }
 
 .workshopContact {
@@ -147,6 +147,55 @@
     font-size: 1.3rem;
     margin-bottom: 0;
     margin-top: 1rem ;
+}
+
+
+@media (max-width: 1200px) {
+  .workshopContact {
+    width: 35%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+}
+
+@media (max-width: 1000px) {
+  .workshopSection {
+    gap: 8em;
+}
+
+.workshopTextSection {
+  width: 100%;
+}
+
+}
+
+@media (max-width: 800px) {
+  .workshopSection {
+  flex-direction: column;
+  gap: 2rem;
+  
+}
+
+.workshopContact {
+    width: 100%;
+    padding: 0rem;
+
+
+}
+
+
+}
+
+@media (max-width: 600px) {
+
+
+}
+
+@media (max-width: 400px) {
+
 }
 
 

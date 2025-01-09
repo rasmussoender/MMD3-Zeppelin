@@ -323,6 +323,57 @@
   grid-row: span 2;    
 }
 
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1000px) {
+  .ensembleContainer {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+  
+}
+
+@media (max-width: 800px) {
+  .indexInstagramGrid.flipped {
+    display: none;
+  }
+
+  
+  .indexInstagramGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .indexInstagramGrid a:nth-of-type(1) {
+    grid-column: span 2;
+    grid-row: span 1;    
+  }
+
+  .indexInstagramGrid a:nth-of-type(n+2) {
+    grid-column: span 1; 
+    grid-row: span 1;   
+  }
+
+}
+
+@media (max-width: 600px) {
+  .ensembleContainer {
+  grid-template-columns: repeat(2, 1fr);
+  
+}
+
+
+}
+
+@media (max-width: 400px) {
+  .ensembleContainer {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+}
+
+
 
 
   

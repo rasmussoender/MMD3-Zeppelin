@@ -107,5 +107,55 @@
     padding-top: 3rem;
 }
 
+@media (max-width: 1200px) {
+
+  .eventTextSection {
+    padding: 10rem;
+    padding-top: 0;
+}
+.eventTextSection p {
+    padding-top: 2rem;
+}
+
+}
+
+@media (max-width: 1000px) {
+  .ensembleContainer {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.eventTextSection {
+    padding: 5rem;
+    padding-top: 0;
+
+}
+
+}
+
+@media (max-width: 800px) {
+
+  .eventTextSection {
+    padding: 3rem;
+    padding-top: 0;
+
+}
+
+
+}
+
+@media (max-width: 600px) {
+  .eventTextSection {
+    padding: 2rem;
+    padding-top: 0;
+
+}
+
+
+}
+
+@media (max-width: 400px) {
+
+}
+
   </style>
   
