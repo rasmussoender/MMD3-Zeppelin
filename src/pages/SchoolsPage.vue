@@ -256,7 +256,7 @@ export default {
 .educationMaterialCard {
   position: relative;
   overflow: hidden;
-  width: 300px; 
+  width: 100%; 
   height: 50vh;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -286,6 +286,47 @@ export default {
   font-weight: bold;
   text-align: center;
   color: var(--primary-yellow);
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1000px) {
+  .educationMaterialList {
+  grid-template-columns: repeat(2, 1fr);
+
+}
+
+  
+}
+
+@media (max-width: 800px) {
+
+  .workshopList {
+
+grid-template-columns: repeat(1, 1fr);
+
+}
+  .educationMaterialList {
+grid-template-columns: repeat(2, 1fr);
+
+}
+
+
+}
+
+@media (max-width: 600px) {
+  .educationMaterialList {
+
+grid-template-columns: repeat(1, 1fr);
+
+}
+
+
+}
+
+@media (max-width: 400px) {
+
 }
 
 

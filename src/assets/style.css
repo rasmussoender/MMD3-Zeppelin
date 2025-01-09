@@ -179,7 +179,8 @@ transform: scale(1.05);
   bottom: 0;
   width: 100%;
   background-color: rgba(30, 30, 30, 0.8);
-  padding: 10px 15px;
+  padding-top: 1rem ;
+  padding-bottom: 1rem;
   text-align: left;
   color: white;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -280,6 +281,10 @@ transform: scale(1.05);
 
       .introText {
         width: 100%;
+      }
+
+      .accordion {
+        max-width: 100vw;
       }
     
     }

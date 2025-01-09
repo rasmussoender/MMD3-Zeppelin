@@ -178,7 +178,7 @@ export default {
       top: 8rem; 
       margin-top: 2rem; 
       align-self: start; 
-      width: 50%; 
+      width: 60%; 
       background: #f0f0f0; 
       border-radius: 8px;
       padding: 1.5rem;

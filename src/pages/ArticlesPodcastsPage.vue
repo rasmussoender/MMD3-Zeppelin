@@ -87,7 +87,7 @@ export default {
   
   position: relative;
   overflow: hidden;
-  width: 300px; 
+  width: 100%; 
   height: 50vh;
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -187,6 +187,41 @@ export default {
   color: var(--primary-text-dark);
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1000px) {
+  .articlePodcastList {
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0;
+  padding-top: 1rem;
+}
+
+
+  
+}
+
+@media (max-width: 800px) {
+
+
+
+}
+
+@media (max-width: 600px) {
+  .articlePodcastList {
+grid-template-columns: repeat(1, 1fr);
+}
+
+
+}
+
+@media (max-width: 400px) {
+
+}
+
+
 
 
   

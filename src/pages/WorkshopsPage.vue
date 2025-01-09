@@ -82,7 +82,6 @@ export default {
     grid-template-columns: repeat(3, 1fr);
     justify-items: center; 
     gap: 2rem;
-
   }
   .workshopCard {
     position: relative;
@@ -103,11 +102,9 @@ export default {
 
   .workshopText {
     position: absolute;
-    bottom: 0;
     width: 100%;
     background-color: rgba(30, 30, 30, 0.8);
-    padding-top: 1rem;
-    padding-bottom: 1rem;  
+
   }
 
   .workshopTitle {
@@ -116,8 +113,32 @@ export default {
     font-size: 1.2rem;
     font-weight: bold;
     color: var(--primary-yellow);
-    margin: 0;
   }
+
+  @media (max-width: 1200px) {
+}
+
+@media (max-width: 1000px) {
+
+  
+}
+
+@media (max-width: 800px) {
+  .workshopList {
+
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+
+}
+
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 400px) {
+
+}
 
 
   

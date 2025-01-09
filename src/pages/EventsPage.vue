@@ -111,6 +111,38 @@ export default {
   margin: 5px 0 0;
 }
 
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1000px) {
+  .eventList {
+    padding: 0rem;
+    padding-top: 1rem;
+
+  }
+
+  
+}
+
+@media (max-width: 800px) {
+  .eventList {
+
+  grid-template-columns: repeat(1, 1fr);
+
+
+}
+
+}
+
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 400px) {
+
+}
+
+
 
   </style>
   

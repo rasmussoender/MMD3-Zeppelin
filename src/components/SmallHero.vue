@@ -3,7 +3,7 @@
     <!-- Hero billeder og titeler er dynamiske-->
     <img :src="heroImage" :alt="heroTitle" class="hero-image" />
     
-    <div class="hero-content">
+    <div class="heroContent">
       <h1>{{ heroTitle }}</h1>
     </div>
     
@@ -54,7 +54,7 @@ export default {
 }
 
 /* Hero content */
-.hero-content {
+.heroContent {
   position: absolute;
   top: 60%;
   left: 50%;
@@ -64,10 +64,43 @@ export default {
   z-index: 2; 
 }
 
-.hero-content h1 {
+.heroContent h1 {
   font-size: 3em;
   margin-bottom: 0.5em;
 }
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 1000px) {
+  .heroContent h1 {
+  font-size: 2em;
+}
+  
+
+
+  
+}
+
+@media (max-width: 800px) {
+
+
+
+}
+
+@media (max-width: 600px) {
+  .heroContent h1 {
+  font-size: 1.5em;
+}
+
+
+}
+
+@media (max-width: 400px) {
+
+}
+
 
 
 
