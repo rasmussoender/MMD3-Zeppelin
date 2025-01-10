@@ -1,7 +1,8 @@
 <template>
     <div>
+            <!-- Small hero component hentes info ændres -->
       <SmallHero 
-        :heroImage="'img/herobilledeZeppelin.jpg'"
+        :heroImage="'img/Kor.jpg'"
         :heroTitle="'Kor'"
       />
     </div>
@@ -60,6 +61,7 @@
 
       <div class="accordion">
         <h3 class="heading2">Ofte stillede spørgsmål</h3>
+        <!-- for loop, der går gennem en liste af spørgsmål og svar, som defineres i script -->
       <div
         v-for="(item, index) in items"
         :key="index"
@@ -70,6 +72,7 @@
           @click="toggleItem(index)"
         >
           <span>{{ item.question }}</span>
+          <!-- Pilen roteres når accordion trykkes på -->
           <i
             class="fa-solid fa-angle-down"
             :class="{ rotatedArrow: openIndex === index }"
@@ -96,20 +99,23 @@ export default {
   },
   data() {
     return {
+      // Alle accordions er lukkede som default
       openIndex: null, 
+      // En liste med objekter hvor svar og spørgsmål defineres
       items: [
-        { question: "Hvordan melder man sig til?", answer: "...." },
-        { question: "Hvad koster det at være med i korene?", answer: "...." },
+        { question: "Hvordan melder man sig til?", answer: " skriv en mail til asker@zeppelin.dk – skriv hvem du/I er, og hvor mange, du vil melde til." },
+        { question: "Hvad koster det at være med i korene?", answer: "kursusprisen er 600 kr. for voksne og 500 kr. for børn for ét semester på hele 14 korgange. Bemærk, at det er langt under “markedsprisen”. Deadline for betaling for 2. korsemester er d.10.1.25. For nye medlemmer der ønsker en gratis prøvegang d.22.1. er betalingsdeadline d.23.1." },
         {
           question: "Hvor foregår det?",
           answer:
             "For at skabe den bedst mulige oplevelse for alle gæster og for at respektere skuespillerne på scenen, er det ikke tilladt at bruge sin mobil under forestillingen. Vi beder dig derfor om at sætte din telefon på lydløs og undgå at tage den frem, så alle kan nyde forestillingen uden forstyrrelser.",
         },
-        { question: "Medlemsrabat på teaterbilletter?", answer: "...." },
-        { question: "Hvilke tidspunkter tager det sted?", answer: "..." },
+        { question: "Medlemsrabat på teaterbilletter?", answer: "Medlemmer af Zeppelins familiekor og kvindekor betaler kun 40 kr. for billetter til Teatret Zeppelins egne forestillinger (ledsagere til kormedlemmer betaler fuld pris)." },
+        { question: "Hvilke tidspunkter tager det sted?", answer: "Vi øver onsdage kl. 18.30-20.00." },
       ],
     };
   },
+  // bruges til at skifte mellem at åbne og lukke en bestemt item i en liste. Såkun en kann være åben af gangen
   methods: {
     toggleItem(index) {
       this.openIndex = this.openIndex === index ? null : index;

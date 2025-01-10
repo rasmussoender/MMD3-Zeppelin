@@ -1,7 +1,7 @@
 <template>
   <div>
     <SmallHero 
-      :heroImage="'img/heroTest.jpg'"
+      :heroImage="'img/Forrestillinger.jpg'"
       :heroTitle="'Artikler og Podcasts'"
     />
   </div>
@@ -10,11 +10,13 @@
     <section class="articlePodcastSection">
       <p class="introText">Samling af artikler og Podcasts med viden om teater, debat og baggrundsstof om teater samt nyheder og info om Teatret Zeppelin – skrevet af medarbejderne og ledelsen på Teatret Zeppelin.</p>
       <div class="articlePodcastList">
+        <!-- loop som henter alle artikel opslag -->
         <div 
     v-for="articlePodcast in articlesPodcasts" 
     :key="articlePodcast.id" 
     class="articlePodcastCard cardAnimationArticle"
   >
+    <!-- Bruger routerlink til at linke hen til det specifikke id for cardet -->
     <router-link :to="{ name: 'artiklerPodcast', params: { id: articlePodcast.id } }">
       <img 
         :src="articlePodcast.acf.image.url" 
@@ -40,20 +42,26 @@
 </template>
 
 <script>
+// henter smallhero component
 import SmallHero from "../components/SmallHero.vue";
 
 export default {
   components: {
     SmallHero,
   },
+      // returnerer et tomt array, som kan fyldes med data fra WP
   data() {
     return {
       articlesPodcasts: [],
     };
   },
+    // mounted kører når komponenten vises på siden. Inde i den bliver fetchArticlesPodcasts kaldt for at hente data .
   mounted() {
     this.fetchArticlesPodcasts();
   },
+  // fetchArticlesPodcasts henter data fra API'en ved at bruge fetch.
+// Den venter på at få svar fra API'en og gemmer de modtagne data i this.articlesPodcasts.
+// Hvis der opstår en fejl under hentningen, vil fejlen blive logget i konsollen.
   methods: {
     async fetchArticlesPodcasts() {
       try {
@@ -204,23 +212,15 @@ export default {
   
 }
 
-@media (max-width: 800px) {
-
-
-
-}
 
 @media (max-width: 600px) {
   .articlePodcastList {
 grid-template-columns: repeat(1, 1fr);
 }
 
-
 }
 
-@media (max-width: 400px) {
 
-}
 
 
 

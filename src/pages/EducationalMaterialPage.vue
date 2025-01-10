@@ -1,7 +1,8 @@
 <template>
     <div>
+      <!-- Henter small nav -->
       <SmallHero 
-        :heroImage="'img/herobilledeZeppelin.jpg'"
+        :heroImage="'img/undervisningsmateriale.jpg'"
         :heroTitle="'Undervisningsmateriale'"
       />
     </div>
@@ -9,14 +10,14 @@
     <main>
       <div class="mediaTextSection">
           <div>
-            <h3 class="heading2">undervisningsmateriale til Zeppelins forestillinger</h3>
+            <h3 class="heading2">Undervisningsmateriale til Zeppelins forestillinger</h3>
             <p>
               Opgaverne er varierede, så eleverne både arbejder på et beskrivende og reflekterende niveau og på et kreativt niveau med fx tegneøvelser eller dramaøvelser. Formålet er, at eleverne får sat ord på deres oplevelse og bearbejdet den på en nuanceret måde.
             </p>
             <p>Det er Teatret Zeppelins ønske, at undervisningsmaterialet vil inspirere og motivere eleverne til at sætte ord på deres teateroplevelse.
             </p>
           </div>
-          <img src="../assets/img/herobilledeZeppelin.jpg" alt="">
+          <img src="../assets/img/undervisningsmateriale.jpg" alt="">
 
         </div>
 
@@ -100,7 +101,6 @@
 
         </section>
 
-
     </main>
     </template>
     
@@ -158,8 +158,7 @@
   color: var(--primary-yellow);
 }
 
-@media (max-width: 1200px) {
-}
+
 
 @media (max-width: 1000px) {
   .educationMaterialList {
@@ -167,7 +166,6 @@
 
 }
 
-  
 }
 
 @media (max-width: 800px) {
@@ -187,10 +185,6 @@ grid-template-columns: repeat(1, 1fr);
 
 }
 
-
-}
-
-@media (max-width: 400px) {
 
 }
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <SmallHero 
-      :heroImage="'img/herobilledeZeppelin.jpg'"
+      :heroImage="'img/workshops.jpg'"
       :heroTitle="'Workshops'"
     />
   </div>
@@ -56,6 +56,9 @@ export default {
   mounted() {
     this.fetchWorkshops();
   },
+// fetchEvents henter data fra API'en ved at bruge fetch.
+// Den venter på at få svar fra API'en og gemmer de modtagne data i this.events
+// Hvis der opstår en fejl under hentningen, vil fejlen blive logget i konsollen.
   methods: {
     async fetchWorkshops() {
       try {
@@ -115,13 +118,6 @@ export default {
     color: var(--primary-yellow);
   }
 
-  @media (max-width: 1200px) {
-}
-
-@media (max-width: 1000px) {
-
-  
-}
 
 @media (max-width: 800px) {
   .workshopList {
@@ -129,14 +125,6 @@ export default {
     grid-template-columns: repeat(1, 1fr);
 
   }
-
-}
-
-@media (max-width: 600px) {
-
-}
-
-@media (max-width: 400px) {
 
 }
 

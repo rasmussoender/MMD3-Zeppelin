@@ -1,13 +1,13 @@
 <template>
     <div>
+      <!-- Small hero component hentes info ændres -->
       <SmallHero 
-        :heroImage="'img/herobilledeZeppelin.jpg'"
+        :heroImage="'img/omOs.jpg'"
         :heroTitle="'Om os'"
       />
     </div>
 
     <main>
-
 
         <div class="mediaTextSection">
           <div>
@@ -106,6 +106,7 @@
           <hr class="deviderLine">
           <section>
         <h3 class="heading2">Citater fra anmeldere</h3>
+        <!-- Swiper kaldes -->
           <Swiper />
       </section>
 
@@ -212,6 +213,7 @@
     </template>
     
     <script>
+    // Henter swiper og smallhero components
     import SmallHero from "../components/SmallHero.vue"; 
     import Swiper from '../components/Swiper.vue';
 
@@ -323,16 +325,13 @@
   grid-row: span 2;    
 }
 
-@media (max-width: 1200px) {
-}
+
 
 @media (max-width: 1000px) {
   .ensembleContainer {
   grid-template-columns: repeat(3, 1fr);
 }
 
-
-  
 }
 
 @media (max-width: 800px) {
@@ -362,7 +361,6 @@
   grid-template-columns: repeat(2, 1fr);
   
 }
-
 
 }
 

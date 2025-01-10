@@ -16,7 +16,7 @@
 
   <div ref="overlayMenu" class="overlay">
 
-    <div class="overlay-content">
+    <div class="overlayContent">
       <ul>
         <li><h3>SCENEN OG SAMVÆRET</h3></li>
         <hr class="navDeviderLine">
@@ -58,6 +58,7 @@
   export default {
     name: "Navbar",
     methods: {
+      // Togglemenu er burgermenuen, når der trykkes på den. Den går fra flex til none afhæningt af om man trykker på den
   toggleMenu() {
     const overlayMenu = this.$refs.overlayMenu;
     overlayMenu.style.display = overlayMenu.style.display === "flex" ? "none" : "flex";
@@ -66,14 +67,11 @@
   };
   </script>
   
-
 <style>
 
 /* General */
-
 /* Nav */
 .navbar {
-  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -85,10 +83,10 @@
   box-sizing: border-box; 
 }
 .navItems {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5rem;
 }
 
 .navItems li a {
@@ -117,6 +115,8 @@
   border: 1.5px solid transparent; 
   border-radius: 5px;
   cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
   font-size: 1rem;
   text-decoration: none;
   transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; 
@@ -161,13 +161,14 @@
   align-items: center;
   padding: 5rem;
   padding-top: 0;
+
 }
 
 .overlay.show {
   display: flex;
 }
 
-.overlay-content {
+.overlayContent {
   position: relative; 
   width: 100%; 
 }
@@ -249,7 +250,6 @@
   }
 
   
-
 }
 
 @media (max-width: 800px) {
@@ -278,8 +278,6 @@
 
 }
 
-@media (max-width: 400px) {
-}
 
 </style>
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <SmallHero 
-      :heroImage="'img/heroTest.jpg'"
+      :heroImage="'img/artikler.jpg'"
       :heroTitle="'Events'"
     />
   </div>
@@ -10,11 +10,13 @@
     <section class="eventSection">
       <p class="introText">Teatret Zeppelin tilbyder forskellige events, alt fra loppemarkeder til kreative workshops. Uanset om du er på udkig efter unikke fund eller ønsker at udforske din kreative side gennem teater, har vi noget for alle. </p>
       <div class="eventList">
+          <!-- v for loop som henter alle events-->
         <div 
           v-for="event in events" 
           :key="event.id" 
           class="eventCard cardAnimation"
         >
+          <!-- Bruger routerlink til at linke hen til det specifikke id for cardet -->
           <router-link :to="{ name: 'event', params: { id: event.id } }">
             <img :src="event.acf.image.url" :alt="event.title.rendered" />
             <div class="eventText cardAnimationText">
@@ -36,14 +38,20 @@ export default {
   components: {
     SmallHero,
   },
+    // returnerer et tomt array med forestillinger, som kan fyldes med data fra WP
   data() {
     return {
       events: [],
     };
   },
+    // mounted kører når komponenten vises på siden. Inde i den bliver fetchEvents kaldt for at hente data om events.
+
   mounted() {
     this.fetchEvents();
   },
+  // fetchEvents henter data fra API'en ved at bruge fetch.
+// Den venter på at få svar fra API'en og gemmer de modtagne data i this.events
+// Hvis der opstår en fejl under hentningen, vil fejlen blive logget i konsollen.
   methods: {
     async fetchEvents() {
       try {
@@ -111,8 +119,7 @@ export default {
   margin: 5px 0 0;
 }
 
-@media (max-width: 1200px) {
-}
+
 
 @media (max-width: 1000px) {
   .eventList {
@@ -133,15 +140,6 @@ export default {
 }
 
 }
-
-@media (max-width: 600px) {
-
-}
-
-@media (max-width: 400px) {
-
-}
-
 
 
   </style>

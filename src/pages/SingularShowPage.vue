@@ -1,5 +1,6 @@
 <template>
   <section class="enkelForestilling">
+    <!-- For looper for forestillinger, og mange af elementer er dynamiske -->
     <div v-if="forestilling">
       <header class="singularPageHero">
         <img class="singularPageHeroImage" :src="forestilling.acf.image.url" :alt="forestilling.title.rendered" />
@@ -31,7 +32,10 @@
         </div>
         <hr class="deviderLine">
         <section class="textCalenderSection">
-          <img src="../assets/img/kalenderPlaceholder.png" alt="">
+          <div class="calenderImageContainer">
+
+            <img :src="forestilling.acf.calenderplaceholder" alt="">
+          </div>
           <div>
             <h2 class="title">{{ forestilling.title.rendered }}</h2>
             <h3 class="subtitle">{{ forestilling.acf.forestillingsubtitle }}</h3>
@@ -83,7 +87,7 @@
             </div>
 
             <div>
-              <img src="../assets/img/placeholderPerson.jpg" alt="">
+              <img :src="forestilling.acf.ensemble.ensembleperson6.personpicture6 || '../src/assets/img/placeholderPerson.jpg'" alt="">
               <h4>{{ forestilling.acf.ensemble.ensembleperson6.personname6 }}</h4>
               <p>{{ forestilling.acf.ensemble.ensembleperson6.personrole6}}</p>
             </div>
@@ -166,13 +170,17 @@
       this.fetchForestillingData();
     },
     methods: {
+        // Her hentes det info fra det specikke id for det post der er blevet trykket på.
+        //  this.$route.params indeholder dynamiske routes
       async fetchForestillingData() {
         const id = this.$route.params.id; 
         try {
           const response = await fetch(`https://zeppelin-teater.rasmuspedersen.net/wp-json/wp/v2/posts/${id}`);
+          // sørger for, at koden venter på, at JSON data er hentet, før den går videre.
           const data = await response.json();
+          // De hentede data bliver gemt i variablen  Forstilling
           this.forestilling = data; 
-
+          // Logger fejl i konsol
         } catch (error) {
           console.error("Der opstod en fejl!", error);
         }
@@ -220,8 +228,14 @@
   gap: 2rem;
 }
 
-.textCalenderSection img {
-  width: 50%;
+.calenderImageContainer {
+  max-height: 60vh;
+  object-fit: cover;
+}
+.calenderImageContainer img {
+  height: 100%;
+  width: 35vw;
+  object-fit: cover;
 }
 
 /* Ensemble sektion */
@@ -290,7 +304,7 @@
 .reviewSection {
   margin-top: 2rem;
   margin-bottom: 2rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
   padding-left: 20rem;
   padding-right: 20rem;
   padding-bottom: 2rem;
@@ -314,8 +328,6 @@
 }
 
 
-@media (max-width: 1200px) {
-}
 
 @media (max-width: 1000px) {
   .reviewSection {
@@ -328,8 +340,6 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-  
-
 
 }
 
@@ -338,6 +348,13 @@
     flex-direction: column;
     padding-bottom: 2rem;
   }
+
+  .calenderImageContainer {
+  max-height: 100%;
+}
+.calenderImageContainer img {
+  width: 100%;
+}
 
   .textCalenderSection img {
 

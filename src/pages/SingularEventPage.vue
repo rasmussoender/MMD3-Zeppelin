@@ -37,11 +37,6 @@
         </div>
 
         </section>
-
-
-
-
-
         </main>
       </div>
       <div v-else>
@@ -61,13 +56,19 @@
       this.fetchEventData();
     },
     methods: {
+      // fetchEventData henter data fra API'en ved at bruge fetch.
       async fetchEventData() {
+        // Her hentes det info fra det specikke id for det post der er blevet trykket på.
+        //  this.$route.params indeholder dynamiske routes
         const id = this.$route.params.id;
         try {
           const response = await fetch(`https://zeppelin-teater.rasmuspedersen.net/wp-json/wp/v2/posts/${id}`);
+          // sørger for, at koden venter på, at JSON data er hentet, før den går videre.
           const data = await response.json();
+          // De hentede data bliver gemt i variablen  event
           this.event = data;
         } catch (error) {
+          // Fejl logges
           console.error("Der opstod en fejl!", error);
         }
       },
@@ -153,9 +154,6 @@
 
 }
 
-@media (max-width: 400px) {
-
-}
 
   </style>
   

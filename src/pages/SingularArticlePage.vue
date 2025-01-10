@@ -57,15 +57,22 @@
         articlePodcast: null,
       };
     },
+    // mounted kører når komponenten vises på siden. Inde i den bliver fetchArticlePodcastData kaldt for at hente data om aktikerl.
     mounted() {
       this.fetchArticlePodcastData();
     },
     methods: {
+      // fetchArticlePodcastData henter data fra API'en ved at bruge fetch.
       async fetchArticlePodcastData() {
+        // Her hentes det info fra det specikke id for det post der er blevet trykket på.
+        //  this.$route.params indeholder dynamiske routes
         const id = this.$route.params.id;
         try {
+          // Her er Urlen blevet ændret i forhold til at hente id dynamisk
           const response = await fetch(`https://zeppelin-teater.rasmuspedersen.net/wp-json/wp/v2/posts/${id}`);
+          // sørger for, at koden venter på, at JSON data er hentet, før den går videre.
           const data = await response.json();
+          // De hentede data bliver gemt i variablen  articlePodcast
           this.articlePodcast = data;
         } catch (error) {
           console.error("Der opstod en fejl!", error);
@@ -88,18 +95,12 @@
 
 }
 
-
-@media (max-width: 1200px) {
-}
-
 @media (max-width: 1000px) {
   .articlePodcastSection {
   padding-left: 5rem;
   padding-right: 5rem;
 }
 
-
-  
 }
 
 @media (max-width: 800px) {
@@ -119,7 +120,6 @@
 }
 
 
-
 }
 
 @media (max-width: 400px) {
@@ -127,7 +127,6 @@
   padding-left: 0;
   padding-right: 0;
 }
-
 
 
 }

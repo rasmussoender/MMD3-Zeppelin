@@ -11,6 +11,7 @@
 </template>
 
 <script>
+// Strings som gemmer heroimage og title og gør man kan ændre billedet og teksen på andre undersider
 export default {
   props: {
     heroImage: {
@@ -94,12 +95,8 @@ export default {
   font-size: 1.5em;
 }
 
-
 }
 
-@media (max-width: 400px) {
-
-}
 
 
 

@@ -1,4 +1,4 @@
-
+// Her opsættes routes for alle sidens pages. Der startes med at importere dem
 import { createRouter, createWebHistory } from 'vue-router';
 import IndexPage from '../pages/IndexPage.vue';
 import ShowsPage from '../pages/ShowsPage.vue';
@@ -15,7 +15,7 @@ import EducationalMaterialPage from '../pages/EducationalMaterialPage.vue';
 import ArticlesPodcastsPage from '../pages/ArticlesPodcastsPage.vue'; 
 import SingularArticlePodcastPage from '../pages/SingularArticlePage.vue';  
 import AboutUsPage from '../pages/AboutUsPage.vue'; 
-
+// Her laves en variabel med paths, som definerer hvad de hedder hver især i url'en
 const routes = [
   { path: '/', name: 'Index', component: IndexPage },
   { path: '/forestillinger', name: 'forestillinger', component: ShowsPage },

@@ -77,11 +77,11 @@
 </script>
 
 <style scoped>
-
 footer {
     background-color: #1E1E1E; 
     color: white; 
 }
+
 section {
     padding-top: 4rem;
     color: #FFFFFF;
@@ -179,7 +179,6 @@ color: white;
     }
 
 
-
 }
 
 @media (max-width: 800px) {
@@ -191,7 +190,6 @@ color: white;
         width: 100%;
 
     }
-
 
     .ikoner i {
     font-size: 2rem;

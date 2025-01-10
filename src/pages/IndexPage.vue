@@ -4,7 +4,7 @@
   </div>
 
   <main>
-    <section class="mediaTextSection">
+    <section id="nextSection" class="mediaTextSection">
         <div>
           <h3 class="heading2">Velkommen til Teatret Zeppelin!</h3>
           <h4>Byens familieteater i hjertet af Vesterbro</h4>
@@ -16,8 +16,7 @@
             at høre mere og finde en løsning, der passer til jer!
           </p>
           <div class="buttonWrapper">
-            <li><router-link class="buttonType1" to="/forestillinger">Forestillinger</router-link></li>
-            <li><router-link class="buttonType1" to="/informationBesogende">Info til besøgende</router-link></li>
+            <li><router-link class="buttonType1" to="/omOs">Om Zeppelin</router-link></li>
             
           </div>
         </div>
@@ -30,6 +29,7 @@
 
       <section>
         <h3 class="heading2">Citater fra anmeldere</h3>
+        <!-- Henter swiper -->
           <Swiper />
       </section>
 
@@ -38,8 +38,11 @@
       <section class="forestillingerIndex">
         <h3 class="heading2">Forestillinger 2024/25</h3>
     <div class="forestillingerList">
+      <!-- v for loop som henter de første 4 forestillinger i arrayet -->
       <div v-for="forestilling in forestillinger.slice(0, 4)" :key="forestilling.id" class="forestillingCard cardAnimation">
+        <!-- Bruger routerlink til at linke hen til det specifikke id for cardet -->
         <router-link :to="{ name: 'forestilling', params: { id: forestilling.id } }">
+          <!-- Henter dynamisk forskellige elementer fra WP -->
           <img :src="forestilling.acf.image.url" :alt="forestilling.title.rendered" />
           <div class="forestillingText cardAnimationText">
             <p class="forestillingTitle">{{ forestilling.title.rendered }}</p>
@@ -65,7 +68,7 @@
       <p>Hos Zeppelin har vi et stærkt fokus på skoleelevers oplevelse og stræber efter at give dem den bedst mulige læring. Er du lærer, kan du finde praktiske oplysninger her.</p>
       <div>
 
-        <a href="#" class="buttonType1">For skoler og institutioner</a>
+        <li><router-link class="buttonType1" to="/skolerInstitutioner"> For Skoler</router-link></li>
       </div>
     </div>
   </div>
@@ -75,7 +78,7 @@
     <div class="textBox parentInfo">
       <h4>Forældre</h4>
       <p>Hos Zeppelin har vi et stærkt fokus på skoleelevers oplevelse og stræber efter at give dem den bedst mulige læring. Er du lærer, kan du finde praktiske oplysninger her.</p>
-      <a href="#" class="buttonType1">Til børnefamilier</a>
+      <li><router-link class="buttonType1" to="/familier"> For Forældre</router-link></li>
     </div>
   </div>
 </div>
@@ -126,6 +129,7 @@
 </template>
 
 <script>
+// Importere hero og swiper komponenter
 import Hero from '../components/Hero.vue';
 import Swiper from '../components/Swiper.vue';
 
@@ -135,14 +139,19 @@ export default {
     Hero,
     Swiper,
   },
+  // returnerer et tomt array med forestillinger, som kan fyldes med data fra WP
   data() {
     return {
       forestillinger: [] 
     };
   },
+  // mounted kører når komponenten vises på siden. Inde i den bliver fetchForestillinger kaldt for at hente data om forestillinger.
   mounted() {
     this.fetchForestillinger(); 
   },
+// fetchForestillinger henter data fra API'en ved at bruge fetch.
+// Den venter på at få svar fra API'en og gemmer de modtagne data i this.forestillinger.
+// Hvis der opstår en fejl under hentningen, vil fejlen blive logget i konsollen.
   methods: {
     async fetchForestillinger() {
       try {
@@ -182,8 +191,6 @@ export default {
 
 
 /* Intro sektion */
-
-
 
 /* Forestilling cards */
 .forestillingerList {
@@ -312,8 +319,6 @@ export default {
 
 }
 
-
-
 /* Instagram galliri */
 .indexInstagramGrid {
   display: grid;
@@ -321,16 +326,24 @@ export default {
   gap: 1rem; 
 }
 
-.grid-item {
-  display: block;
-  position: relative; 
-}
 
 .indexInstagramGrid a img {
   display: block;    
   width: 100%;       
   height: 100%;      
   object-fit: cover; 
+}
+
+.indexInstagramGrid a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease; 
+}
+
+.indexInstagramGrid a:hover img {
+  transform: scale(1.05); 
 }
 
 .indexInstagramGrid a:nth-of-type(1) {
@@ -374,20 +387,17 @@ export default {
 }
 
 
-@media (max-width: 1200px) {
-}
 
 @media (max-width: 1000px) {
 
-
 .buttonWrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
 
-    .imageContainer {
+  .imageContainer {
     position: static; 
     height: auto; 
   }
@@ -411,8 +421,6 @@ export default {
   .schoolsAndParentsSection {
     flex-direction: column; 
     gap: 2rem;
-
-
   }
 
   .schoolInfo {
@@ -436,8 +444,6 @@ export default {
   left: auto;
   padding: 3rem 0;
 }
-
-
 
 }
 
@@ -493,15 +499,8 @@ export default {
     grid-row: span 1;   
   }
 
-
-
-
-
-
 }
 
-@media (max-width: 400px) {
-}
 
 
 

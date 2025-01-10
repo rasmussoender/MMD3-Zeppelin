@@ -1,7 +1,8 @@
 <template>
     <div>
+      <!-- Henter small hero -->
       <SmallHero 
-        :heroImage="'img/heroTest.jpg'"
+        :heroImage="'img/skolerFor.jpg'"
         :heroTitle="'For Skoler'"
       />
     </div>
@@ -16,7 +17,7 @@
             <p> Ring endelig til os på tlf. 33220478, hvis du ikke finder det, du søger. Generel praktisk info for almindelige besøgende har vi samlet på
             </p>
           </div>
-          <img src="../assets/img/workshopCafe.jpg" alt="">
+          <img src="../assets/img/eleverBillede.jpg" alt="">
         </div>
 
         <hr class="deviderLine">
@@ -24,12 +25,15 @@
         <h2 class="heading2">Workshops</h2>
         <p class="workshopIntroText">Vi har mange års erfaring med dramaundervisning og tilbyder flere former for teaterrelaterede aktiviteter som workshops, dramaforløb, projektudvikling og meget andet – hos os eller hos jer, og i åbenhed over for jeres temaer og idéer. </p>
       <div class="workshopList">
+           <!-- v for loop som henter de første 3 workshops i arrayet -->
+
         <div 
-          v-for="workshop in workshops" 
+          v-for="workshop in workshops.slice(0, 3)" 
           :key="workshop.id" 
           class="workshopCard cardAnimation"
         >
           <router-link :to="{ name: 'workshop', params: { id: workshop.id } }">
+            <!-- Henter dynamisk forskellige elementer fra WP -->
             <img :src="workshop.acf.image.url" :alt="workshop.title.rendered" />
             <div class="workshopText cardAnimationText">
               <p class="workshopTitle">{{ workshop.title.rendered }}</p>
@@ -54,11 +58,11 @@
             <p>Diskutér forestillingen sammen. Hvordan stemte den overens med forventningerne? Hvordan blev lys, lyd og temaer brugt? Hvis det er muligt, kan I hilse på skuespillerne for at få indblik i arbejdet bag forestillingen.</p>
 
           </div>
-          <img src="../assets/img/workshopCafe.jpg" alt="">
+          <img src="../assets/img/kidsTheatre.jpg" alt="">
         </div>
 
         <div class="mediaTextSection">
-          <img src="../assets/img/workshopCafe.jpg" alt="">
+          <img src="../assets/img/PeopleWatchingTheatre.jpg" alt="">
 
           <div>
             <h3 class="heading2">Skab forståelse for teateroplevelsen</h3>
@@ -123,6 +127,7 @@
 
         <div class="accordion">
         <h3 class="heading2">Ofte stillede spørgsmål</h3>
+        <!-- for loop, der går gennem en liste af spørgsmål og svar, som defineres i script -->
       <div
         v-for="(item, index) in items"
         :key="index"
@@ -133,6 +138,8 @@
           @click="toggleItem(index)"
         >
           <span>{{ item.question }}</span>
+
+            <!-- Pilen roteres når accordion trykkes på -->
           <i
             class="fa-solid fa-angle-down"
             :class="{ rotatedArrow: openIndex === index }"
@@ -158,20 +165,24 @@ export default {
   components: {
     SmallHero,
   },
+  
   data() {
     return {
       workshops: [],
+      // Alle accordions er lukkede som default
       openIndex: null,
+      // En liste med objekter hvor svar og spørgsmål defineres
       items: [
-        { question: "Hvordan bestiller vi billetter til skoleklasser?", answer: "...." },
-        { question: "Hvad gør vi, hvis vi bliver forsinkede til forestillingen?", answer: "...." },
+        { question: "Hvordan bestiller vi billetter til skoleklasser?", answer: "Skoleklasser får billetter til 40 kr. pr. elev, og den samme lave pris gælder for de medfølgende lærere. Vi anbefaler, at I ringer til os på 33220478 og bestiller billetter for at sikre, at I får lærerrabatten med. En skoleudflugt til Teatret Zeppelin er ikke en dyr fornøjelse." },
+        { question: "Hvad gør vi, hvis vi bliver forsinkede til forestillingen?", answer: "Det er vigtigt, at teatret bliver informeret, hvis jeres klasse bliver forsinket eller forhindret, så vi ikke opholder andre klasser unødigt. Det er ligeledes vigtigt, at vi kan kontakte jer på dagen, og I bedes derfor have en tændt telefon med jer og sørge for, at det er nummeret på den telefon, som I opgiver ved bestilling." },
         {
           question: "Er det nødvendigt at medbringe billetter på papir?",
           answer:
-            "Nej, det er ikke nødvendigt at printe billetter. Medbring i stedet fakturaen eller ordrebekræftelsen.",
+            "I skal IKKE printe billetter ud. Medbring i stedet jeres betalte faktura eller ordrebekræftelse, og fremvis den. Vi fremsender ikke billetter til større grupper og skoleklasse, men sparer papiret.",
         },
-        { question: "Kan vi spise medbragt mad på teatret?", answer: "...." },
-        { question: "Tilbyder Teatret Zeppelin rundvisninger eller oplæg?", answer: "..." },
+        { question: "Skal jeg forberede min elever?", answer: "Det kan være en stor og måske overvældende oplevelse at være i teatret. Derfor er det vigtigt at forberede eleverne godt, inden besøget. " },
+        { question: "Tilbyder Teatret Zeppelin rundvisninger eller oplæg?", answer: "For studerende på lærerseminariet, pædagoguddannelen, kulturstudiefag e.l. kan vi efter aftale arrangere et kort oplæg og efterfølgende Q&A ved fagperson, f.eks. en fra teatrets ledelse. Til det yngre publikum fra skoler og institutioner o.l. har vi sommetider haft fornøjelsen af at give en rundvisning bagom scenen i mindre grupper. Hvis lignende kunne være noget for jer, så kontakt os, og vi vil forsøge at skræddersy et gratis oplæg, som er relevant for netop jer." }, 
+        
       ],
     };
   },
@@ -188,6 +199,7 @@ export default {
         console.error("Der opstod en fejl!", error);
       }
     },
+      // bruges til at skifte mellem at åbne og lukke en bestemt item i en liste. Såkun en kann være åben af gangen
     toggleItem(index) {
       this.openIndex = this.openIndex === index ? null : index;
     },
@@ -288,8 +300,6 @@ export default {
   color: var(--primary-yellow);
 }
 
-@media (max-width: 1200px) {
-}
 
 @media (max-width: 1000px) {
   .educationMaterialList {
@@ -297,7 +307,6 @@ export default {
 
 }
 
-  
 }
 
 @media (max-width: 800px) {
@@ -312,7 +321,6 @@ grid-template-columns: repeat(2, 1fr);
 
 }
 
-
 }
 
 @media (max-width: 600px) {
@@ -325,9 +333,6 @@ grid-template-columns: repeat(1, 1fr);
 
 }
 
-@media (max-width: 400px) {
-
-}
 
 
   

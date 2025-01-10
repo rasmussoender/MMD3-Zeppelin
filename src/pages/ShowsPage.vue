@@ -1,7 +1,8 @@
 <template>
   <div>
+    <!-- SMall hero hentes også kan billedet og titlen ændres dynamisk -->
     <SmallHero 
-      :heroImage="'img/herobilledeZeppelin.jpg'"
+      :heroImage="'img/showPageHero.jpg'"
       :heroTitle="'Forestillinger'"
     />
   </div>
@@ -10,8 +11,11 @@
     <section class="forestillingerIndex">
       <p class="introText">Teatret Zeppelin tilbyder en række spændende og meningsfulde forestillinger, der appellerer til både børn og unge. Med mere end 40 års erfaring skaber teatret forestillinger, der udfordrer og engagerer publikum fra store til små </p>
       <div class="forestillingerList">
+              <!-- v for loop som henter alle forestillingerne-->
         <div v-for="forestilling in forestillinger" :key="forestilling.id" class="forestillingCard cardAnimation">
+                  <!-- Bruger routerlink til at linke hen til det specifikke id for cardet -->
           <router-link :to="{ name: 'forestilling', params: { id: forestilling.id } }">
+            <!-- Henter dynamisk forskellige elementer fra WP -->
             <img :src="forestilling.acf.image.url" :alt="forestilling.title.rendered" />
             <div class="forestillingText cardAnimationText">
               <p class="forestillingTitle">{{ forestilling.title.rendered }}</p>
@@ -26,20 +30,26 @@
   </template>
   
   <script>
+  // Importere smallhero og  komponenent
 import SmallHero from "../components/SmallHero.vue";
 
 export default {
   components: {
     SmallHero,
   },
+    // returnerer et tomt array med forestillinger, som kan fyldes med data fra WP
   data() {
     return {
       forestillinger: [],
     };
   },
+    // mounted kører når komponenten vises på siden. Inde i den bliver fetchForestillinger kaldt for at hente data om forestillinger.
   mounted() {
     this.fetchForestillinger();
   },
+// fetchForestillinger henter data fra API'en ved at bruge fetch.
+// Den venter på at få svar fra API'en og gemmer de modtagne data i this.forestillinger.
+// Hvis der opstår en fejl under hentningen, vil fejlen blive logget i konsollen.
   methods: {
     async fetchForestillinger() {
       try {
@@ -107,15 +117,6 @@ export default {
 }
 
 
-@media (max-width: 1200px) {
-}
-
-@media (max-width: 1000px) {
-
-  
-
-}
-
 @media (max-width: 800px) {
   .forestillingerList {
   grid-template-columns: repeat(2, 1fr);
@@ -134,9 +135,6 @@ export default {
 
 }
 
-@media (max-width: 400px) {
-
-}
 
 
 

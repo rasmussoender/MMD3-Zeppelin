@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!-- Her kaldes components som går igen på alle sider -->
     <Navigation />
     <ChatBox />
 

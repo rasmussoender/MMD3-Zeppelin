@@ -1,7 +1,7 @@
 <template>
     <div>
       <SmallHero 
-        :heroImage="'img/herobilledeZeppelin.jpg'"
+        :heroImage="'img/familier.jpg'"
         :heroTitle="'For Familier'"
       />
     </div>
@@ -10,7 +10,7 @@
       <div class="familySectioncontainer">
          <div class="imgWelcomeContainer">
            <div class="introImg">
-             <img src="../assets/img/herobilledeZeppelin.jpg" alt="">
+             <img src="../assets/img/kidTheatre.jpg" alt="">
             </div>
             <div class="greenBoxWelcome">
               <h2>Velkommen til Teaterets Magiske Univers for Børn og Familier!</h2>
@@ -67,12 +67,11 @@
             </p>
             <p>Nogle børn forlader måske salen for at beskytte sig selv, hvilket er naturligt, men de går glip af oplevelsen og samtalen bagefter. Ved at tale om teatrets virkemidler og historiens temaer kan du gøre barnet trygt og klar til at nyde oplevelsen. Med lidt forberedelse bliver teateret en magisk stund for hele familien.</p>
           </div>
-          <img src="../assets/img/parkering.jpg" alt="">
+          <img src="../assets/img/darkTheatre.jpg" alt="">
 
         </div>
-
         <div class="mediaTextSection">
-          <img src="../assets/img/offentligTransport.jpg" alt="">
+          <img src="../assets/img/familierTeater4.jpg" alt="">
 
           <div>
             <h3 class="heading2">Strategeier</h3>
@@ -84,8 +83,6 @@
             <p>
               I kan dramatisere scener fra forestillingen derhjemme. Rollerne og dramaøvelserne hjælper børn med at forstå teatrets virkemidler og de følelser, der opstår. Det viser dem, at det, der sker på scenen, "bare er leg."
             </p>
-
-
           </div>
         </div>
 
@@ -98,7 +95,7 @@
             <p>Teater omfatter lyd, lys, skuespillernes bevægelser, replikker, kostumer, rekvisitter, scenografi og effekter som ild eller røg. Bag kostumerne er altid en skuespiller – et helt almindeligt menneske.
             </p>
           </div>
-          <img src="../assets/img/parkering.jpg" alt="">
+          <img src="../assets/img/familierTeater.jpg" alt="">
         </div>
     </main>
     </template>
@@ -163,7 +160,7 @@
 
   .mediaTextSection {
     padding-bottom: 0;
-    padding-top: 0;
+    padding-top: 1rem;
   }
 
 
@@ -216,9 +213,6 @@
 
 }
 
-@media (max-width: 400px) {
-
-}
 
       
       

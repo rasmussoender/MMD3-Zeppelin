@@ -73,12 +73,17 @@
     },
     methods: {
       async fetchWorkshopData() {
+        // Her hentes det info fra det specikke id for det post der er blevet trykket på.
+        //  this.$route.params indeholder dynamiske routes
         const id = this.$route.params.id;
         try {
           const response = await fetch(`https://zeppelin-teater.rasmuspedersen.net/wp-json/wp/v2/posts/${id}`);
+          // sørger for, at koden venter på, at JSON data er hentet, før den går videre.
           const data = await response.json();
+          // De hentede data bliver gemt i variablen  workshop
           this.workshop = data;
         } catch (error) {
+          // Logger fejl i konsol
           console.error("Error fetching workshop data:", error);
         }
       },
@@ -157,8 +162,6 @@
     align-items: center;
 }
 
-
-
 }
 
 @media (max-width: 1000px) {
@@ -186,15 +189,6 @@
 
 }
 
-
-}
-
-@media (max-width: 600px) {
-
-
-}
-
-@media (max-width: 400px) {
 
 }
 

@@ -1,6 +1,8 @@
 <!-- Brugt Swiper vue -->
 <!-- 3 parts kode: https://swiperjs.com/vue -->
 <template>
+  <!-- fortæller Swiper hvilke funktione den skal bruge -->
+   <!-- Definerer ting såson hvor mange der skal vises per slide, om man vil have pagination, autoplay og hvor lang der der går -->
     <swiper
       :modules="modules"
       :slides-per-view="1"
@@ -15,6 +17,7 @@
       @swiper="onSwiper"
       @slideChange="onSlideChange"
     >
+    <!-- Putter dynamisk info ind i swiperen, som defineres længere nede -->
       <swiper-slide v-for="(review, index) in reviews" :key="index">
         <div class="reviewSection">
           <div>
@@ -28,6 +31,7 @@
   </template>
   
   <script>
+  // Importere alle elementerne fra swiper
   import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
   import { Swiper, SwiperSlide } from 'swiper/vue';
   import 'swiper/css';
@@ -39,6 +43,7 @@
       Swiper,
       SwiperSlide,
     },
+    // Her definerers alle de data man vil vise i swiperen
     data() {
       return {
         reviews: [
@@ -65,6 +70,7 @@
         ],
       };
     },
+    // Der opsætters variabler og moduler, som bruges af Swiper.
     setup() {
       const onSwiper = (swiper) => {
         console.log(swiper);
@@ -118,9 +124,6 @@
   
 }
 
-@media (max-width: 800px) {
-
-}
 
 @media (max-width: 600px) {
   .reviewSection {
@@ -137,9 +140,6 @@
 
 }
 }
-
-
-
 
   </style>
   

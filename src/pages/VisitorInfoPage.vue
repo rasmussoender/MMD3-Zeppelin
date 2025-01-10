@@ -1,7 +1,7 @@
 <template>
     <div>
       <SmallHero 
-        :heroImage="'img/herobilledeZeppelin.jpg'"
+        :heroImage="'img/infoBesogende.jpg'"
         :heroTitle="'Info til besøgende'"
       />
     </div>
@@ -102,9 +102,11 @@
         </div>
         <hr class="deviderLine">
 
-
+        
         <div class="accordion" id="faq">
         <h3 class="heading2">Ofte stillede spørgsmål</h3>
+      <!-- for loop, der går gennem en liste af spørgsmål og svar, som defineres i script -->
+
       <div
         v-for="(item, index) in items"
         :key="index"
@@ -115,6 +117,8 @@
           @click="toggleItem(index)"
         >
           <span>{{ item.question }}</span>
+          <!-- Pilen roteres når accordion trykkes på -->
+
           <i
             class="fa-solid fa-angle-down"
             :class="{ rotatedArrow: openIndex === index }"
@@ -144,20 +148,24 @@ export default {
   },
   data() {
     return {
+      // Alle accordions er lukkede som default
       openIndex: null, 
+      // En liste med objekter hvor svar og spørgsmål defineres
       items: [
-        { question: "Må jeg selv medbringe mad?", answer: "...." },
-        { question: "Kan man købe mad?", answer: "...." },
+        { question: "Må jeg selv medbringe mad?", answer: "Det er tilladt at spise sin medbragte mad i Kaféen på 3. sal. Kaféen lukker dog, når sidste forestilling er sat i gang, så hvis I er en skoleklasse, der vil spise i Kaféen efter forestillingen, skal I aftale det med teatrets personale på forhånd." },
+        { question: "Kan man købe mad?", answer: "Øverst i teaterhuset har vi Kaféen. Kaféen serverer ikke mad, men slik, chokolade, snacks, vand og varme drikke samt øl og vin. Kaféen har kun åbent for salg i weekender og på hverdage i efterårs- og vinterferien (uge 42 og uge 7)." },
         {
           question: "Må man bruge sin telefon under forestillingerne?",
           answer:
             "For at skabe den bedst mulige oplevelse for alle gæster og for at respektere skuespillerne på scenen, er det ikke tilladt at bruge sin mobil under forestillingen. Vi beder dig derfor om at sætte din telefon på lydløs og undgå at tage den frem, så alle kan nyde forestillingen uden forstyrrelser.",
         },
-        { question: "Kan jeg retunere/bytte mine billetter?", answer: "...." },
-        { question: "...", answer: "..." },
+        { question: "Kan jeg retunere/bytte mine billetter?", answer: "Du er altid velkommen til at kontakte os på billet@zeppelin.dk eller tlf. 33220478 (telefontid: hverdage 9-15) for at forhøre dig om mulighederne. Vi kan desværre ikke love, at du kan få byttet til en anden dag, da der kan være udsolgt. I udgangspunktet er der ifølge købeloven ikke returret på teaterbilletter." },
+        { question: "Mit barn er ikke gammel nok, må jeg tage det med alligevel?", answer: "Aldersgrænsen på de enkelte forestillinger bedes respekteres. Grænsen er sat af en velovervejet grund. Det handler først og fremmest om at sikre børn et godt møde med teatrets verden. Derudover handler det om at sikre de andre gæster i salen en god oplevelse samt skuespillerne rimelige arbejdsvilkår uden for mange forstyrrelser. Der kan dog være undtagelser hos nogle gæstespil for de yngste, hvor man tillader f.eks. spædbørn at komme med ind i salen. Kontakt os på forhånd, så du er sikker på reglerne, før I står på teatret." },
       ],
     };
   },
+  //   // bruges til at skifte mellem at åbne og lukke en bestemt item i en liste. Såkun en kann være åben af gangen
+
   methods: {
     toggleItem(index) {
       this.openIndex = this.openIndex === index ? null : index;
@@ -234,13 +242,9 @@ width: 100%;
   }
 
 
-  
 }
 
-@media (max-width: 800px) {
 
-
-}
 
 @media (max-width: 600px) {
   .LocalNav {
@@ -249,13 +253,7 @@ width: 100%;
 
 }
 
-@media (max-width: 400px) {
-
-}
-
-    
 
 
-    
     </style>
     
