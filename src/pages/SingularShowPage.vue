@@ -56,56 +56,56 @@
         <section class="ensembleSection">
   <h3 class="heading2">Ensemble</h3>
   <div class="ensembleContainer">
-            <div>
-              <img :src="forestilling.acf.ensemble.ensembleperson1.personpicture1 || '../src/assets/img/placeholderPerson.jpg'" alt="">
-              <h4>{{ forestilling.acf.ensemble.ensembleperson1.personname1 }}</h4>
-              <p>{{ forestilling.acf.ensemble.ensembleperson1.personrole1}}</p>
-            </div>
+    <div>
+      <img :src="forestilling.acf.ensemble.ensembleperson1.personpicture1 || '/img/placeholderPerson.jpg'" alt="">
+      <h4>{{ forestilling.acf.ensemble.ensembleperson1.personname1 }}</h4>
+      <p>{{ forestilling.acf.ensemble.ensembleperson1.personrole1 }}</p>
+    </div>
 
-            <div>
-              <img :src="forestilling.acf.ensemble.ensembleperson2.personpicture2 || '../src/assets/img/placeholderPerson.jpg'" alt="">
-              <h4>{{ forestilling.acf.ensemble.ensembleperson2.personname2 }}</h4>
-              <p>{{ forestilling.acf.ensemble.ensembleperson2.personrole2}}</p>
-            </div>
+    <div>
+      <img :src="forestilling.acf.ensemble.ensembleperson2.personpicture2 || '/img/placeholderPerson.jpg'" alt="">
+      <h4>{{ forestilling.acf.ensemble.ensembleperson2.personname2 }}</h4>
+      <p>{{ forestilling.acf.ensemble.ensembleperson2.personrole2 }}</p>
+    </div>
 
-            <div>
-              <img :src="forestilling.acf.ensemble.ensembleperson3.personpicture3 || '../src/assets/img/placeholderPerson.jpg'" alt="">
-              <h4>{{ forestilling.acf.ensemble.ensembleperson3.personname3 }}</h4>
-              <p>{{ forestilling.acf.ensemble.ensembleperson3.personrole3}}</p>
-            </div>
+    <div>
+      <img :src="forestilling.acf.ensemble.ensembleperson3.personpicture3 || '/img/placeholderPerson.jpg'" alt="">
+      <h4>{{ forestilling.acf.ensemble.ensembleperson3.personname3 }}</h4>
+      <p>{{ forestilling.acf.ensemble.ensembleperson3.personrole3 }}</p>
+    </div>
 
-            <div>
-              <img :src="forestilling.acf.ensemble.ensembleperson4.personpicture4 || '../src/assets/img/placeholderPerson.jpg'" alt="">
-              <h4>{{ forestilling.acf.ensemble.ensembleperson4.personname4 }}</h4>
-              <p>{{ forestilling.acf.ensemble.ensembleperson4.personrole4}}</p>
-            </div>
+    <div>
+      <img :src="forestilling.acf.ensemble.ensembleperson4.personpicture4 || '/img/placeholderPerson.jpg'" alt="">
+      <h4>{{ forestilling.acf.ensemble.ensembleperson4.personname4 }}</h4>
+      <p>{{ forestilling.acf.ensemble.ensembleperson4.personrole4 }}</p>
+    </div>
 
-            <div>
-              <img :src="forestilling.acf.ensemble.ensembleperson5.personpicture5 || '../src/assets/img/placeholderPerson.jpg'" alt="">
-              <h4>{{ forestilling.acf.ensemble.ensembleperson5.personname5 }}</h4>
-              <p>{{ forestilling.acf.ensemble.ensembleperson5.personrole5}}</p>
-            </div>
+    <div>
+      <img :src="forestilling.acf.ensemble.ensembleperson5.personpicture5 || '/img/placeholderPerson.jpg'" alt="">
+      <h4>{{ forestilling.acf.ensemble.ensembleperson5.personname5 }}</h4>
+      <p>{{ forestilling.acf.ensemble.ensembleperson5.personrole5 }}</p>
+    </div>
 
-            <div>
-              <img :src="forestilling.acf.ensemble.ensembleperson6.personpicture6 || '../src/assets/img/placeholderPerson.jpg'" alt="">
-              <h4>{{ forestilling.acf.ensemble.ensembleperson6.personname6 }}</h4>
-              <p>{{ forestilling.acf.ensemble.ensembleperson6.personrole6}}</p>
-            </div>
+    <div>
+      <img :src="forestilling.acf.ensemble.ensembleperson6.personpicture6 || '/img/placeholderPerson.jpg'" alt="">
+      <h4>{{ forestilling.acf.ensemble.ensembleperson6.personname6 }}</h4>
+      <p>{{ forestilling.acf.ensemble.ensembleperson6.personrole6 }}</p>
+    </div>
 
-            <div>
-              <img :src="forestilling.acf.ensemble.ensembleperson7.personpicture7 || '../src/assets/img/placeholderPerson.jpg'" alt="">
-              <h4>{{ forestilling.acf.ensemble.ensembleperson7.personname7 }}</h4>
-              <p>{{ forestilling.acf.ensemble.ensembleperson7.personrole7}}</p>
-            </div>
+    <div>
+      <img :src="forestilling.acf.ensemble.ensembleperson7.personpicture7 || '/img/placeholderPerson.jpg'" alt="">
+      <h4>{{ forestilling.acf.ensemble.ensembleperson7.personname7 }}</h4>
+      <p>{{ forestilling.acf.ensemble.ensembleperson7.personrole7 }}</p>
+    </div>
 
-            <div>
-              
-              <img :src="forestilling.acf.ensemble.ensembleperson8.personnpicture8 || '../src/assets/img/placeholderPerson.jpg'" alt="">
-              <h4>{{ forestilling.acf.ensemble.ensembleperson8.personname8 }}</h4>
-              <p>{{ forestilling.acf.ensemble.ensembleperson8.personrole8 }}</p>
-            </div>
-          </div>
-      </section>
+    <div>
+      <img :src="forestilling.acf.ensemble.ensembleperson8.personnpicture8 || '/img/placeholderPerson.jpg'" alt="">
+      <h4>{{ forestilling.acf.ensemble.ensembleperson8.personname8 }}</h4>
+      <p>{{ forestilling.acf.ensemble.ensembleperson8.personrole8 }}</p>
+    </div>
+  </div>
+</section>
+
 
       <div class="indexInstagramContainer">
         <h3 class="heading2">Billeder fra teatret</h3>
@@ -113,41 +113,41 @@
         <div class="indexInstagramGrid">
   <div class="imageContainer">
     <img 
-      :src="forestilling.acf.galleri.galleriimage1 || '../src/assets/img/ZeppelinOm1.jpg'" 
+      :src="forestilling.acf.galleri.galleriimage1 || '/img/ZeppelinOm1.jpg'" 
       alt="">
   </div>
   <div class="imageContainer">
     <img 
-      :src="forestilling.acf.galleri.galleriimage2 || '../src/assets/img/galleriPlaceholder.jpg'" 
+      :src="forestilling.acf.galleri.galleriimage2 || '/img/galleriPlaceholder.jpg'" 
       alt="">
   </div>
   <div class="imageContainer">
     <img 
-      :src="forestilling.acf.galleri.galleriimage3 || '../src/assets/img/galleriPlaceholder3.jpg'" 
+      :src="forestilling.acf.galleri.galleriimage3 || '/img/galleriPlaceholder3.jpg'" 
       alt="">
   </div>
   <div class="imageContainer">
     <img 
-      :src="forestilling.acf.galleri.galleriimage4 || '../src/assets/img/galleriplacerholder2.jpg'" 
+      :src="forestilling.acf.galleri.galleriimage4 || '/img/galleriplacerholder2.jpg'" 
       alt="">
   </div>
   <div class="imageContainer">
     <img 
-      :src="forestilling.acf.galleri.galleriimage5 || '../src/assets/img/ZeppelinOm5.jpg'" 
+      :src="forestilling.acf.galleri.galleriimage5 || '/img/ZeppelinOm5.jpg'" 
       alt="">
   </div>
   <div class="imageContainer">
     <img 
-      :src="forestilling.acf.galleri.galleriimage6 || '../src/assets/img/ZeppelinOm6.jpg'" 
+      :src="forestilling.acf.galleri.galleriimage6 || '/img/ZeppelinOm6.jpg'" 
       alt="">
   </div>
   <div class="imageContainer">
     <img 
-      :src="forestilling.acf.galleri.galleriimage7 || '../src/assets/img/ZeppelinOm7.jpg'" 
+      :src="forestilling.acf.galleri.galleriimage7 || '/img/ZeppelinOm7.jpg'" 
       alt="">
   </div>
-  
 </div>
+
           </div>
 
         </main>
